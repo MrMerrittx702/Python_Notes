@@ -44,17 +44,26 @@ in # apart of
 not in # not apart of
 
 #Logical Operators (for multiple conditions)
-#Order of Operations NAXO
-not (~) # opposite: ~T --> F // ~F --> T
-and (&) #both : T and T --> T //all others are F
-xor (^) # only 1: T ^ F, F ^ T --> T // all others F
-or (|)  # at least 1: F or F --> F // all others are T
+#Order of Operations NAO
+not  # opposite: ~T --> F // ~F --> T
+and  #both : T and T --> T //all others are F
+or   # at least 1: F or F --> F // all others are T
 '''
 
 #Truth tables show how logical operators are evaluated
 
 #===============================================================================================================================#
 '> Boolean Expressions (evaluate True or False)'
+'  > expressions that evaluate to either True or False'
+'  > typically used with conditionals and while loops'
+
+'''
+Operators
+relational ( ==, !=, <, >, <=, >=)
+logical    (not, and, or)
+membership ( in, not in)
+identity   (is, is not)
+'''
 
 #String Comparisons
 print("text" == "text") #True

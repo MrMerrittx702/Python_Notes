@@ -111,6 +111,10 @@ set_2 - set_3 #{4,5,6,9,0}
         or
       class.method(paramters) --> for methods which do not require objects
 '''
+
+#To see what methods you can call on an object use dir(object)
+#To see more information on a specific method use help(object.method)
+
 set1d = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0}
 
 # set1d.add(element) adds an element to the set.

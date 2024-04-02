@@ -194,6 +194,9 @@ sorted(tuple1d) #returns a sorted list of the specified iterable
       class.method(paramters) --> for methods which do not require objects
 '''
 
+#To see what methods you can call on an object use dir(object)
+#To see more information on a specific method use help(object.method)
+
 #.index(x, start, end)
 tuple1d.index("elem")# Returns the index of the first occurrence of element x 
 tuple1d.index("elem",2,5)#(optional start and end indices can be specified).

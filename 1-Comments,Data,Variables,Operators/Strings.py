@@ -150,7 +150,7 @@ def unicode_lookup(character, print_table=False):
                The tuple structure is (Unicode_code_point, Decimal, Hexadecimal, Binary, Octal).
 
     Example:
-        >>> unicode_lookup('A')
+        >> unicode_lookup('A')
         ('U+0041', 65, '0x41', '0b1000001', '0o101')
     """
     unicode_table = {}
@@ -378,6 +378,9 @@ len(word)-1 # 10 --> the last index of the word
         or
       class.method(paramters) --> for methods which do not require objects
 '''
+
+#To see what methods you can call on an object use dir(object)
+#To see more information on a specific method use help(object.method)
 
 string = "hello world"
 

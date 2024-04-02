@@ -7,6 +7,8 @@ Covered in this file:
 > Casting (changing data type)
 > Arithmetic operators (math)
 > Relational operators (inequalities)
+  > Membership operators
+  > Identity operators
 > Assignment vs Equality Operator
 > Compound Assignment Operators
 > Logical operators (not, and, or)
@@ -105,11 +107,17 @@ print( 5 ** 2 ) #25
   != #not equal to
 
   #Special to python
-  is      # identical to
-  is not  # not identical to
-  in      # apart of
-  not in  # not apart of
-'''
+
+    Membership Operators
+      in      # apart of
+      not in  # not apart of
+
+    Identity Operators
+      is      # identical to
+      is not  # not identical to
+    
+
+  '''
 
   #relational operators are used for comparisons that evaluate to a boolean (True/False)
 
@@ -122,14 +130,18 @@ print( x >= z ) #True
 print( x <= z ) #False
 print( y == z ) #True
 print( y != x ) #True
-  
-print( y is z ) #True
-print( x is not z ) #True
+
+#Membership Operators
 print( "a" in list1d ) #True
 print( "d" not in list1d ) #True
 
+#Identity Operators
+print( y is z ) #True
+print( x is not z ) #True
+
+
 #===============================================================================================================================#
-'> Assignment vs. Equality Operator'
+'> Assignment vs. Equality Operators'
 
 '''
 = #assignment 

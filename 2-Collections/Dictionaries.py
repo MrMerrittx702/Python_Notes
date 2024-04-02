@@ -210,6 +210,8 @@ reversed(ucase_alpha)
         or
       class.method(paramters) --> for methods which do not require objects
 '''
+#To see what methods you can call on an object use dir(object)
+#To see more information on a specific method use help(object.method)
 
 # dict.copy() return a shallow copy of a dictionary
 ucase_alpha.copy()

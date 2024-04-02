@@ -27,11 +27,13 @@ Covered in this file:
 '> Beginner Data Types'
 
 #Literals (are actual values)(they do not represent something else)
-
-"Hello World" # String (text) in quotes use "" or '' 
+True          # boolean(True or False)
 5             # integer (whole number)
 3.14          # float (decimal number)
-True          # boolean(True or False)
+"a"           # character (single symbol) in quotes use "" or ''
+"Hello World" # String (text) in quotes use "" or '' 
+
+
 
 ["a","b","c"] # list (contains multiple items called elements)
 # 0   1   2   # indexes (are used to access each element)

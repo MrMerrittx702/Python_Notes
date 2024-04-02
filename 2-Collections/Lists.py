@@ -207,6 +207,9 @@ sorted(list1d)
       class.method(paramters) --> for methods which do not require objects
 '''
 
+#To see what methods you can call on an object use dir(object)
+#To see more information on a specific method use help(object.method)
+
 #.append() 
 list1d.append("new elem")# Adds a single element x to the end of the list.
 
