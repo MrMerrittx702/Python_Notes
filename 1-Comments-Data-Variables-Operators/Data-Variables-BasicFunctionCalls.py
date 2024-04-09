@@ -19,7 +19,7 @@ Covered in this file:
 '> General Syntax'
 #Syntax (rules for writing the language)
 #Code is executed from top to bottom left to right
-#Every open needs a close: (), "", '', [], {}, <>
+#Every open symbol needs a close: (), "", '', [], {}, <>
 #Indentation is required in Python --> if,elif,else,while,for,def,class,etc.
 #To a computer code is either perfectly written or it is wrong
 
