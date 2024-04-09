@@ -2,7 +2,7 @@
 '''Script Kiddies First Python Program'''
 #===============================================================================================================================#
 
-#As a new programmer you might be referd to as a Script Kiddie, 
+#As a new programmer you might be refered to as a Script Kiddie, 
 #This is a programmer joke to describe someone who does not know much about programming
 #Script Kiddies often use code they do not understand written by other programmers
 
@@ -70,7 +70,8 @@ Congrats you have written your first python program!
 
 Python Programs can be executed by invoking the interpreter through the command prompt or python shell.
 
-  Python is installed by default here C:\Program Files\Python310 on Windows depending on the version installed.
+  Python is installed by default here C:\Program Files\Python3xx on Windows depending on the version installed.
+  Python may also be installed here for a specific user: C:\Users\%USERPROFILE%\AppData\Local\Programs\Python\Python3xx
     To check the current version type the following on the command line interface
 
       python --version

@@ -245,6 +245,8 @@ print("character " + str(chr(num)))                       #
 #=========================================================#
 #===============================================================================================================================#
 '> Strings Defined'
+'>> Strings are immutable (cannot be changed) sequences of characters.'
+'>> If a new string is needed you must create a new one.'
 
 #a string is a sequence of characters and is surrounded by quotation marks
 "Hello World" or 'Hello World'
@@ -252,12 +254,13 @@ print("character " + str(chr(num)))                       #
 #strings can be stored by a variable
 str_ = "String of Text"
 
-#String literals can span multiple lines
+#String literals can span multiple lines and automatically include the newline character at the end
+#use \ to remove the automatice newline character.
 print("""\  
 line 1
 line 2
 line 3
-""") #\ removes the initial new line
+""") 
 
 #more technically strings are objects of the 'str' class in python
 print(type("My String")) # <class 'str">
@@ -265,6 +268,16 @@ print(type("My String")) # <class 'str">
 #===============================================================================================================================#
 '> Strings Concatenation and Duplication'
 #concatenate means to join
+
+#String literals next to each other are automatically concatenated
+#useful for breaking up long strings
+"Python is an easy to learn, powerful programming language."
+"It has efficient high-level data structures and a simple but "
+"effective approach to object-oriented programming."
+"Python’s elegant syntax and dynamic typing, together with its interpreted nature, "
+"make it an ideal language for scripting and rapid application development in many areas"
+" on most platforms."
+
 
 #to join two strings use +
 "Hello" + " World" # Hello World
@@ -323,6 +336,7 @@ gen_unicode_table()
 #strings can be indexed like lists
 #each character is given a number starting from 0
 #don't forget spaces!
+
 
 '''
 String -->  P   r   o  g  r  a  m  m  i  n  g

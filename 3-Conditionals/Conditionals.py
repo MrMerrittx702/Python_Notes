@@ -15,6 +15,7 @@
   > Chained Conditionals 
   > Nested Conditionals 
   > Ternary Operators: Shorthand Conditionals`
+  > Match Statements
 '''
 #===============================================================================================================================#
 '> Review: Booleans, Relational Operators, and  Logical Operators'
@@ -303,4 +304,60 @@ print("if") if x > 0 else print("else if") if y > 0 else print("else")
 # The term "ternary" refers to the fact that it takes three operands: the condition to be evaluated, 
 # the expression to be returned if the condition is true, and the expression to be returned if the 
 # condition is false.
+
+#===============================================================================================================================#
+'> Match Statements'
+'>> Compare an expression to one or more case blocks.'
+'>> Only the first matched pattern is executed.'
+
+
+https_response = ...
+
+match https_response:
+  case 400:
+      print("Bad request")
+  case 401:
+      print("Unauthorized")
+  case 403:
+      print("Forbidden")
+  case 404:
+      print("Not found")
+  case 418:
+      print("I'm a teapot")
+  case 500:
+      print("Internal Server Error")
+  case _:
+      print("An error occured")
+
+# The '_' acts as a wildcard and always matches. 
+# If no case matches the program continues 
+
+'>> Combining Literals'
+'Use "or" or "|" to combine multiple literals into one case'
+
+https_response = ...
+
+match https_response:
+  case 400 or 401 or 403 or 404 or 418:
+    print("Client Side Error")
+  case 500 | 501:
+    print("Server Side Error")
+
+
+'>> Adding a Guard' 
+a = False
+character = 97
+
+match character:
+  case 97 if a: #addiing an if statement to the case creates a guard
+    print("a") #This line executes if the guard is true, and the case matches.
+  case 98: 
+    print("b")
+  case 99:
+    print("c")
+  case _:
+    print("")
+
+
+
 

@@ -48,6 +48,9 @@ Dictionary is a collection which is ordered** and changeable. No duplicate membe
 #declare      initialize
 set1d = {1,2,3,4,5,6,7,8,9}
 
+#To create and empty set you must use set() using {} creates a dictionary
+empty = set()
+
 #===============================================================================================================================#
 '> Converting from Lists and Tuples'
 

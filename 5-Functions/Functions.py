@@ -153,6 +153,8 @@ count_to(10)# 1 2 3 4 5 6 7 8 9 10
   The 'return' keyword is used to send a function's result back to the caller
     > When a function returns it immediately ends, lines after the return do not execute
     > return does not print
+    > functions that do not return a value automatically return 'None'
+    > None or NULL means nothing or no value
 '''
 
 #function definition
@@ -314,6 +316,7 @@ positional("a", "b" ,"c")
 '   > Use the * character to unpack list like iterables as arguments'
 '   > Each argument is assigned based on position'
 
+
 def unpack_positional(a,b,c,d,e):
    return [a,b,c,d,e]
 
@@ -334,6 +337,7 @@ print(list(range(*nums)))  # [1,2,3,4,5,6,7,8,9]
 ' > Use / to force arguments to be assigned by postion only'
 ' > Arguments appearing before the / are forced'
 ' > Arguments apperaing after the / are not'
+' > use positional-only if the name of parameters do not matter, or the names should not be available to the user.'
 
 #def function_name(pos1,pos2,/,pos_or_kwd,*,kwd1,kwd2): positional only, positional or keyword, keyword only
 def position_forced(p1,p2,/):
@@ -386,8 +390,15 @@ display_data(**data)
 ' > Use the * character to force arguments to be assigned by keyword only'
 ' > Arguments appearing after the * are forced'
 ' > Arguments apperaing before the * are not'
+' > Use keyword-only when the names of parameters have meaning, or you want to prevent users from using positional parameters.'
 
-#def function_name(pos1,pos2,/,pos_or_kwd,*,kwd1,kwd2): positional only, positional or keyword, keyword only
+
+# def function_name(pos1, pos2, /, pos_or_kwd, *, kwd1, kwd2):
+#                  -----------    ----------     ----------
+#                   |             |                  |
+#                    |        Positional or keyword   |
+#                    |                                - Keyword only
+#                     -- Positional only
 def forced_keywords(*,name, age, grade, school):
    return f"Hello {name}, you are {age} years old, in grade {grade}, and attend {school}"
 
@@ -653,6 +664,8 @@ def multi_line_docstring():
     The above line should be blank. The rest describes the
     calling conventions, side effects, and etc."""
     pass
+    
+#The dunder attribute __doc__ returns the docstring of a function
 print(multi_line_docstring.__doc__)
 
 #===============================================================================================================================#

@@ -22,7 +22,7 @@
 #===============================================================================================================================#
 '> Defining a list'
 
-'A list is an ordered mutable collection of data.'
+'A list is an ordered mutable collection of data, with multiple comma seperated values.'
 # ordered meaning it has a specific order 0,1,2,...
 # mutable meaning it can be changed
 
@@ -194,7 +194,21 @@ min(list1d)#Returns the smallest element in the list.
 nums = [1,2,3,4,5]
 sum(nums) #Returns the sum of all elements in a number list.
 
+# Returns the list reversed
+reversed(list1d)
+
+# Returns an iterator of tuples containing the index, and elem of the list.
+enumerate(list1d)
+
+#Returns a sorted list in ascending order
 sorted(list1d)
+
+#Combines two lists into an iterator of tuples 
+list1 = ["a","b","c"]
+list2 = [1,2,3]
+zip(list1, list2)
+# ("a",1),("b",2),("c",3)
+
 
 
 #===============================================================================================================================#
@@ -411,6 +425,13 @@ for i in range(len(alphanumeric)):
 # for element in list:
 for char in alphanumeric:
   print(char) #prints each element of alphanumberic
+
+
+#for element in reversed(list):
+for elem in reversed(alphanumeric):
+  print(elem)
+#prints each element of the reversed list
+
 
 
 #for index, element in enumerate(list):
