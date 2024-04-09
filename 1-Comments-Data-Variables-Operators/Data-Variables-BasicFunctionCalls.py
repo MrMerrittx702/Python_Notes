@@ -4,28 +4,117 @@
 '''
 Covered in this file:
   > General Syntax
-  > Beginner Data Types (5 most common)
-  > All Data Types
-  > Sequence (Top to Bottom, Left to Right)
-  > Print Function Call
+  > Data Types
   > Literals (actual values)
   > Variables (containers that store values)
   > Type Annotations: Declaring Variable Type
   > Aliases (reference the same data)
+  > Print Function Call
   > Input Function Call
   > Nesting (put one thing inside of another)
 '''
 #===============================================================================================================================#
 '> General Syntax'
-#Syntax (rules for writing the language)
-#Code is executed from top to bottom left to right
-#Every open symbol needs a close: (), "", '', [], {}, <>
-#Indentation is required in Python --> if,elif,else,while,for,def,class,etc.
-#To a computer code is either perfectly written or it is wrong
+
+' > Syntax (rules for writing the language)'
+' > Code is executed from top to bottom left to right'
+#Python code is executed from top to bottom, left to right, and line by line. 
+#1 Top,Left >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Top,Right>
+#2    V
+#3        V
+#4            V
+#5                V  Python
+#6                    V  Requires
+#7                        V  Indentation
+#8                            V  In Its
+#9                                V  Syntax
+#10                                   V 
+#11                                       V
+#12                                            V
+#13                                                 V
+#14                                                     V
+#15                                                         V
+#16                                                             V
+#17                                                                 V
+#18 Bottom,Left >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Bottom,Right>
+
+' > Every open needs a close: (), "", '', [], {}, <>'
+
+'' # single quotes
+"" # double quotes
+() # parenthesis
+[] # square brackets
+{} # curly braces
+
+' > Indentation is required in Python --> if,elif,else,while,for,def,class,etc.'
+'   > it is used to define scope or context of code blocks.'
+
+... # > place holder
+
+'Conditionals'
+if(...):
+    ... #indented code block
+#unindent to exit scope
+elif(...):
+    ... #indented code block
+#unindent to exit scope
+else:
+    ... #indented code block
+#unindent to exit scope
+
+'While Loops'
+while(...):
+    ... #indented code block
+#unindent to exit scope
+
+'For Loops'
+for _ in ...:
+    ... #indented code block
+#unindent to exit scope
+
+'Function Definitions'
+def function():
+    ... #indented code block
+#unindent to exit scope
+
+'Class Definitions'
+class foo():
+    ... #indented code block
+#unindent to exit scope
+
+' > Python Programming Style Guide'
+'''
+
+  Use 4-space indentation, and no tabs. Editors like VSCode automatically covert for you.
+
+    > 4 spaces are a good compromise between small indentation (allows greater nesting depth) and large indentation (easier to read). 
+    > Tabs introduce confusion, and are best left out.
+
+  Wrap lines so that they don't exceed 79 characters.
+
+  Use blank lines to separate functions and classes, and larger blocks of code inside functions.
+
+  When possible, put comments on a line of their own
+
+  Use docstrings to document functions and classes.
+
+  Use spaces around operators and after commas, but not directly inside bracketing constructs:
+      a = f(1, 2) + g(3, 4)
+      
+  Name your classes and functions consistently; the convention is to
+      > UpperCamelCase for classes
+      > lower_snake_case for functions and methods.
+      > Always use self as the name for the first method argument
+
+'''
+
+
+' > To a computer code is either perfectly written or it is wrong'
 
 #===============================================================================================================================#
-'> Beginner Data Types'
+'> Data Types'
 
+'  > Beginner'
 #Literals (are actual values)(they do not represent something else)
 True          # boolean(True or False)
 5             # integer (whole number)
@@ -39,7 +128,7 @@ True          # boolean(True or False)
 # 0   1   2   # indexes (are used to access each element)
 
 #There are more data types but these are the main types for beginners.
-#===============================================================================================================================#
+
 '> All Data Types'
 '''
   Data types are classified into two groups
@@ -69,51 +158,6 @@ bytearray(b'hello') # Byte Arrays are mutable sequences of bytes
 None                # Null type meaning nothing
 
 #===============================================================================================================================#
-'> Sequence (Top to Bottom, Left to Right)'
-#Python code is executed from top to bottom, left to right, and line by line. 
-#1 Top,Left >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Top,Right>
-#2    V
-#3        V
-#4            V
-#5                V  Python
-#6                    V  Requires
-#7                        V  Indentation
-#8                            V  In Its
-#9                                V  Syntax
-#10                                   V 
-#11                                       V
-#12                                            V
-#13                                                 V
-#14                                                     V
-#15                                                         V
-#16                                                             V
-#17                                                                 V
-#18 Bottom,Left >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Bottom,Right>
-
-#===============================================================================================================================#
-'> The Print Function Call'
-
-#top to bottom
-print()
-print("Hello World")
-print(5)
-print(3.14)
-print(1j)
-print(True)
-print(False)
-
-#left to right
-print(); print("Hello World")
-
-
-#after printing the cursor goes to a new line
-#use ,end = "" to keep the cursor on the same line
-print("Hello")
-print("World")
-#vs.
-print("Hello", end = "")
-print("World")
-#===============================================================================================================================#
 '> Data Literals'
 #Literal refers to a notation for representing a fixed actual value
 #Literals do not represent something else
@@ -127,6 +171,7 @@ True              # boolean literal
 ("a","b","c")     # tuple literal
 {"a","b","c"}     # set literal 
 {"a":97,"b":98 }  # dictionary literal
+
 
 #===============================================================================================================================#
 '> Variables are containers that store data values'
@@ -178,17 +223,47 @@ var1 = 0
 1var = 0
 v-ar = 0
 v ar = 0 
+!var = 0
+@#$%@ = 0
 '''
+
 
 #===============================================================================================================================#
 '> Aliases'
+' > assigning one variable to store another variable is called aliasing.'
+' > the variables pass a reference to the data they store.'
 a = "some text"
 
-#you can assign one variable to store another (this is an alias)
+#a, b, and c are aliases (ie they point to the same data)
 b = a 
 c = b
-print(c)
+print(b) # some text
+print(c) # some text
 
+# a points to a new value
+a = "a was changed"
+print(b) # some text
+print(c) # some text
+
+# b points to a new value
+b = "b was changed"
+print(a) # a was changed
+print(c) # some text
+
+# c points to a new value
+c = "c was changed"
+print(a) # a was changed
+print(b) # b was changed
+
+#if a,b, and c point to a mutable data type 
+# a change in the data is reflected in all variables. 
+a = [1,2,3]
+b = a
+c = b
+c[0] = 999
+print(a) # [999, 2, 3]
+print(b) # [999, 2, 3]
+print(c) # [999, 2, 3]
 
 #===============================================================================================================================#
 '> Type Annotations: Declaring Variable type'
@@ -205,14 +280,72 @@ tuple1d: tuple = ("a","b","c")
 set1d: set = {"a","b","c"}
 dictionary: dict = {"a": 97, "b": 98, "c":99}
 
+
+#===============================================================================================================================#
+'> The Print Function Call'
+
+'  > Prints out data to standard output (std.out) or to a file.'
+print()                   #
+print(True)               # True
+print(10)                 # 10
+print(2.17)               # 2.17
+print(5j)                 # 5j
+print("Hello World")      # Hello World
+print(["a","b","c"])      # [a,b,c]
+print(("a","b","c"))      # (a,b,c)
+print({"a","b","c"})      # {a,b,c} 
+print({"a":97,"b":98})    # {a:97,b:98}
+
+' > Print multiple comma seperated values.'
+print("one", "two", "three", "four")
+#one two three four
+
+' > end parameter'
+#by default after printing the cursor goes to a new line
+#use ,end = "" to keep the cursor on the same line
+print("Hello")
+print("World")
+# Hello
+# World
+#vs.
+print("Hello", end = "") #default is a newline character
+print("World")
+# HelloWorld
+
+' > sep parameter'
+# specifies a separator between each value.
+print("Hello", "World", sep = ":") #Default is a single space
+#Hello:World
+
+' > file parameter'
+#specifies a file to write the output
+print("Hello World", file = "output.txt") #default is std.out
+
+' > flush parameter'
+#specifies if the output buffer will be flushed after printing
+print("Hello World", flush = True) #default is False
+
+'''
+the output buffer refers to a temporary storage area where the data to be printed by the print() function 
+is held before it's actually displayed. 
+
+When you call print(), Python doesn't immediately write the output to the console or file. 
+Instead, it stores the output in this buffer until certain conditions are met.
+'''
+
 #===============================================================================================================================#
 '> The Input Function Call'
-#prompts the user to provide input data (values)
 
+' > pauses the program and wait for the user to provide input data' 
 input()# the program will stop here and wait for the user to type in a value
+#input reads from Standard Input (stdin)
 
+' > prompt parameter'
+input(prompt = "This is the prompt for the user: ")
+#or
 input("This is a prompt for the user: ")
 
+' > Storing user input'
 #The input can be stored inside of a variable
 user_input = input("Please input a value: ")
 
@@ -223,6 +356,7 @@ last_name = input("Last name: ")
 print(first_name)
 print(last_name)
 
+' > Numbers as input'
 #input() treats each value as a string. you will need to convert to use numbers. 
 integer_ = int(input("Write a whole number: "))
 float_ = float(input("Write a decimal number: "))
@@ -237,51 +371,26 @@ float_ = float(input("Write a decimal number: "))
 
 #nested conditionals
 if():
-  if():
     if():
-      ...
+        if():
+            ...
 
 #nested while loops
 while():
-  while():
     while():
-      ...
+        while():
+            ...
 
 #nested for loops
 for _ in range():
-  for _ in range():
     for _ in range():
-      ...
+        for _ in range():
+            ...
       
 #Nested function calls function(function(function(function())))
 print(int(input("Type a number")))
 #The input function is inside of the int function which is inside of the print function.
 
 #===============================================================================================================================#
-'> Coding Style Guide'
-'''
-  Use 4-space indentation, and no tabs.
-  4 spaces are a good compromise between small indentation (allows greater nesting depth) and large indentation (easier to read). 
-    Tabs introduce confusion, and are best left out.
-
-  Wrap lines so that they don't exceed 79 characters.
-
-  Use blank lines to separate functions and classes, and larger blocks of code inside functions.
-
-  When possible, put comments on a line of their own
-
-  Use docstrings
-
-  Use spaces around operators and after commas, but not directly inside bracketing constructs:
-      a = f(1, 2) + g(3, 4)
-      
-  Name your classes and functions consistently; the convention is to
-      use UpperCamelCase for classes
-      use lower_snake_case for functions and methods.
-      Always use self as the name for the first method argument
-
-'''
-#===============================================================================================================================#
-
 
 

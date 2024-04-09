@@ -20,18 +20,19 @@ Covered in this file:
 
 #===============================================================================================================================#
 '> Concatenation (combining strings)'
+' > concatenation means to join'
 
 '''
 + combine strings
 * duplicate string
 '''
 
-#Literals are actual values 
+#use the + to concatenate strings
 "Hello" + "World"
 
 print("Hello" + "World")
 
-#Variable
+#using a variable
 a = "Hello"
 b = "World"
 print(a + b)
@@ -43,7 +44,9 @@ print(duplicated) #aaa
 
 #===============================================================================================================================#
 '> Casting'
+' > converting the type of data.'
 
+'Function calls for casting.'
 type() #returns the data type
 str()  #convert to string
 int()  #Converts a number or string to an integer.
@@ -53,19 +56,19 @@ float()#Converts a number or string to a floating-point number.
 a = 5
 b = "10"
 c = 7
-print(type(a))
-print(type(b))
-print(type(c))
-print()
+print(type(a)) # <class 'int'>
+print(type(b)) # <class 'str'> 
+print(type(c)) # <class 'int'> 
+
 
 a = str(5)
 b = int("10")
 c = float(7)
-print(type(a))
-print(type(b))
-print(type(c))
+print(type(a)) # <class 'str'> 
+print(type(b)) # <class 'int'>  
+print(type(c)) # <class 'float'>
 
-
+#===============================================================================================================================#
 '> General Order of Operations'
 
 #1. Arithmetic Operators (PEMDAS)
@@ -77,22 +80,26 @@ print(type(c))
 #Order of operations follows PEMDAS from Algebra
 #Parenthesis, Exponents, Multiply/Divide, Add/Substract
 '''
-  +   #add
-  -   #subtract
+  **  #exponentiation (power) 
+
   *   #multiply
   /   #divide
   //  #floor division(Integer division)
   %   #modulo (remainder division)
-  **  #exponentiation (power)
-'''
 
-print( 5 + 2 )  # 7
-print( 5 - 2 )  # 3
+  +   #add
+  -   #subtract
+  
+'''
+print( 5 ** 2 ) #25
+
 print( 5 * 2 )  # 10
 print( 5 / 2 )  # 2.5
 print( 5 // 2 )  # 2 Truncates 2.5 to 2 (does not round)
 print( 5 % 2 )  # 1
-print( 5 ** 2 ) #25
+
+print( 5 + 2 )  # 7
+print( 5 - 2 )  # 3
 #===============================================================================================================================#
 '> Relational Operators (Inequalities)'
   #relational operators are used for comparisons 
@@ -243,7 +250,7 @@ not(a or b)  == (not a or not b)  # False    #
 
 # abs(x)
 abs(-10) #10
-# Returns the absolute value of x.
+# Returns the absolute value of x. 
 
 
 # max(iterable, *, key, default) *: separates the positional arguments from the keyword-only arguments that follow.
