@@ -73,11 +73,11 @@ start_index = 0; list_length=0; step=1
 index = start_index #start (starting index in python is 0)
 
 while index < list_length :#stop (stop at the end of the list)
-  #indent 2 spaces for code in the block
-  #--------------------------#
-  #code block to execute here#
-  #--------------------------#
-  index += step  #step (usually by 1)
+    #indent 4 spaces for code in the block
+    #--------------------------#
+    #code block to execute here#
+    #--------------------------#
+    index += step  #step (usually by 1)
 #unindent to leave the block
 
 #===============================================================================================================================#
@@ -91,11 +91,11 @@ list1d = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'] #declare and initialize
 index = 0 #start at first index
 
 while index < len(list1d): # or <= len(list1d)-1  stop at last index 
-  
-  print(index, end = " ") # prints index
-  print(list1d[index], end = " ") #prints element
-  
-  index += 1 # increment by 1
+    
+    print(index, end = " ") # prints index
+    print(list1d[index], end = " ") #prints element
+    
+    index += 1 # increment by 1
 
 #end =" " is just for formatting the output
 #===============================================================================================================================#
@@ -173,10 +173,10 @@ index =  0 #start at first index
 
 while index < len(list1d)//2: #or <= (len(list1d)//2)-1 #stop at middle index
 
-  print(index, end = " ") # prints index
-  print(list1d[index], end = " ") #prints element
+    print(index, end = " ") # prints index
+    print(list1d[index], end = " ") #prints element
 
-  index += 1 # increment by 1
+    index += 1 # increment by 1
 
 #end =" " is just for formatting the output
 #===============================================================================================================================#
@@ -191,10 +191,10 @@ index = (len(list1d)//2)-1 # start at middle index
 
 while index >= 0: #or > -1 #stop at first index
 
-  print(index, end = " ") # prints index
-  print(list1d[index], end = " ") #prints element
+    print(index, end = " ") # prints index
+    print(list1d[index], end = " ") #prints element
 
-  index -= 1 # decrement by 1
+    index -= 1 # decrement by 1
 
 #end =" " is just for formatting the output
 #===============================================================================================================================#
@@ -210,10 +210,10 @@ index = len(list1d)//2 #start at middle index
 
 while index < len(list1d):# or <= len(list1d)-1 #stop at last index
 
-  print(index, end = " ") # prints index
-  print(list1d[index], end = " ") #prints element
+    print(index, end = " ") # prints index
+    print(list1d[index], end = " ") #prints element
 
-  index += 1 # increment by 1
+    index += 1 # increment by 1
 
 #end =" " is just for formatting the output
 #===============================================================================================================================#
@@ -228,10 +228,10 @@ index = len(list1d)-1 #start at last index
 
 while index >= len(list1d)//2: #or > (len(list1d)//2)-1 stop at middle index
 
-  print(index, end = " ") # prints index
-  print(list1d[index], end = " ") #prints element
+    print(index, end = " ") # prints index
+    print(list1d[index], end = " ") #prints element
 
-  index -= 1 # decrement by 1
+    index -= 1 # decrement by 1
 
 #end =" " is just for formatting the output
 #===============================================================================================================================#

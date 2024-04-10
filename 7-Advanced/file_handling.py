@@ -25,8 +25,7 @@ file.close()
 #Using Context Managers (with statment)
 #automatically closes files
 with open("file.txt","r") as file:
-  
-  print( file.read() )
+    print( file.read() )
 
 
 'Error Handling'

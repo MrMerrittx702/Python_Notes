@@ -78,57 +78,54 @@ Use nested for loops to iterate
 #Outer Loop 
 #start a the first list, stop at the last list, increment by 1
 for row in range(0,len(list2d),1):
-  ...
+    ...
 
 #Inner Loop
 #start at the first item, stop at  the last item, increment by 1
 for col in range(0,len(list2d[row]),1):
-  ...
+    ...
 
 
 'The inner loop goes inside of the outer loop'
-#Outer Loop----------------------------------------------#
-for row in range(0,len(list2d),1):                       #
-  #Inner Loop---------------------------------#          #
-  for col in range(0,len(list2d[row]),1):     #          #
-     ...                                      #          #
-  #exit inner loop----------------------------#          #
-#exit outer loop-----------------------------------------#
+#Outer Loop-------------------------------------------------#
+for row in range(0,len(list2d),1):                          #
+    #Inner Loop----------------------------------#          #
+    for col in range(0,len(list2d[row]),1):      #          #
+        ...                                      #          #
+    #exit inner loop-----------------------------#          #
+#exit outer loop--------------------------------------------#
      
-#end = " " is just for formatting the output
 #===============================================================================================================================#
 '> Forward Iteration: Beginning to End'
 
 for row in range(0,len(list2d),1): # first row(0) to last row by 1s 
 
-  for col in range(0,len(list2d[row]),1): # first col(0) to last col by 1s
+    for col in range(0,len(list2d[row]),1): # first col(0) to last col by 1s
 
-    print(row, col, end = ", ")#printing indexes
-    print(list2d[row][col], end = " ") #printing elements
+        print(row, col, end = ", ")#printing indexes
+        print(list2d[row][col], end = " ") #printing elements
 
-  print()#this line is just for formatting the output
+    print()#this line is just for formatting the output
 
 
 for row in range(len(list2d)): # 0(default) to last row by 1s(default)
 
-  for col in range(len(list2d[row])): # 0(default) to last col by 1s(default)
+    for col in range(len(list2d[row])): # 0(default) to last col by 1s(default)
 
-    print(row, col, end = ", ") # printing indexes
-    print(list2d[row][col], end = " |") # printing elements
+        print(row, col, end = ", ") # printing indexes
+        print(list2d[row][col], end = " |") # printing elements
 
-  print()#this line is just for formatting the output
+    print()#this line is just for formatting the output
 
 
 #no formatting
 for row in range(len(list2d)): 
 
-  for col in range(len(list2d[row])): 
+    for col in range(len(list2d[row])): 
 
-    print(row,col) # printing indexes
-    print(list2d[row][col]) # printing elements
+        print(row,col) # printing indexes
+        print(list2d[row][col]) # printing elements
 
-
-#end = ", " and end = " |" are just for formatting the output
 #===============================================================================================================================#
 '> For Each Loop'
 #special for loop syntax
@@ -136,14 +133,14 @@ for row in range(len(list2d)):
 
 #Note only works forward, and only works for looping through the entire list
 for row in list2d:
-  for col in row:
-    print(col, end = "|")
-  print() # this line is just for formatting the output
+    for col in row:
+        print(col, end = "|")
+    print() # this line is just for formatting the output
 
 #no formating
 for row in list2d:
-  for col in row:
-    print(col)
+    for col in row:
+        print(col)
 
 #end = " " is just for formatting the output
 #===============================================================================================================================#
@@ -152,26 +149,22 @@ for row in list2d:
 
 for row in range(len(list2d)-1,-1,-1): # last row to first row(0) by 1s
 
-  for col in range(len(list2d[row])-1,-1,-1): # last col to first col(0) by 1s
+    for col in range(len(list2d[row])-1,-1,-1): # last col to first col(0) by 1s
 
-    print(row, col, end = ", ")#printing indexes
-    print(list2d[row][col], end = " |") #printing elements
+        print(row, col, end = ", ")#printing indexes
+        print(list2d[row][col], end = " |") #printing elements
 
-  print() # this line is just for formatting the output
+    print() # this line is just for formatting the output
 
 
 #no formatting
 for row in range(len(list2d)-1,-1,-1):
 
-  for col in range(len(list2d[row])-1,-1,-1): 
+    for col in range(len(list2d[row])-1,-1,-1): 
 
-    print(row,col)#printing indexes
-    print(list2d[row][col]) #printing elements
-  
-
-
-
-
+        print(row,col)#printing indexes
+        print(list2d[row][col]) #printing elements
+    
 
 #end = ", " and end = " |" are just for formatting the output
 #===============================================================================================================================#
@@ -186,10 +179,10 @@ list2d = [[4, 2, 7, 2, 7, 2, 6, 5, 6, 6], [7, 7, 8, 5, 8, 1, 3, 7, 6, 5], [5, 1,
 
 count = 0
 for row in range(len(list2d)):#range assumes start == 0 and step == 1
-  for col in range(len(list2d[row])):#range assumes start == 0 and step == 1
-    if(7 == list2d[row][col]):
-      count +=1
-print(count) # 101
+    for col in range(len(list2d[row])):#range assumes start == 0 and step == 1
+        if(7 == list2d[row][col]):
+            count +=1
+    print(count) # 101
 
 
 
@@ -207,11 +200,11 @@ list2d = [                          #For Loops with 2d Lists
 
 vowels = "aeiou"
 for row in range(len(list2d)):#range assumes start == 0 and step == 1
-  for col in range(len(list2d[row])):#range assumes start == 0 and step == 1
-    if list2d[row][col] in vowels:
-      list2d[row][col] = "V"
-    else:
-      list2d[row][col] = "C"
+    for col in range(len(list2d[row])):#range assumes start == 0 and step == 1
+        if list2d[row][col] in vowels:
+            list2d[row][col] = "V"
+        else:
+            list2d[row][col] = "C"
 
 print(list2d)
 
@@ -231,9 +224,9 @@ list2d = [
 ] 
 
 for row in range(len(list2d)):
-  if(0 == row % 2):
-    for col in range(len(list2d[row])):
-      print(list2d[row][col], end = " ")
-  else:
-    for col in range(len(list2d[row]-1,-1,-1)):
-      print(list2d[row][col], end = " ")
+    if(0 == row % 2):
+        for col in range(len(list2d[row])):
+            print(list2d[row][col], end = " ")
+    else:
+        for col in range(len(list2d[row]-1,-1,-1)):
+            print(list2d[row][col], end = " ")

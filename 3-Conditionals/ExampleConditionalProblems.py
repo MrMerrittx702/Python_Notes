@@ -12,30 +12,30 @@
 num = 0
 
 if(num % 2 == 0):
-  print("even")
+    print("even")
 else:
-  print("odd")
+    print("odd")
 
 #Determine if a number is positive negative or 0
 num = 0
 
 if(num > 0):
-  print("positive")
+    print("positive")
 elif(num < 0):
-  print("negative")
+    print("negative")
 else:
-  print(0)
+    print(0)
 
 #Given two numbers determine which one is larger
 a = 4
 b = 3
 
 if(a > b):
-  print(a)
+    print(a)
 elif(b > a):
-  print(b)
+    print(b)
 else:
-  print("equal")
+    print("equal")
 
 #Given 3 numbers determine the largest
 a = 1
@@ -43,11 +43,11 @@ b = 2
 c = 3
 
 if(a > b and a > c):
-  print(a, "is largest")
+    print(a, "is largest")
 elif(b > a and b > c):
-  print(b, "is largest")
+    print(b, "is largest")
 else:
-  print(c, "is largest")
+    print(c, "is largest")
 
 
 #Determine if a year is a leap year(nested if)
@@ -58,44 +58,44 @@ else:
 year = 2023
 
 if year % 4 == 0:
-  if year % 100 == 0:
-    if year % 400 == 0:
-      print(year, "is a leap year")
+    if year % 100 == 0:
+        if year % 400 == 0:
+            print(year, "is a leap year")
+        else:
+            print(year, "is not a leap year")
     else:
-      print(year, "is not a leap year")
-` else:
-    print(year, "is a leap year")
+        print(year, "is a leap year")
 else:
-  print(year, "is not a leap year") 
-  `
+    print(year, "is not a leap year") 
+
 
 #Write a program that takes a number from 1 to 12 as input from the user and prints the corresponding month name.
 month = 1
 
-if(month = 1):
-  print("January")
-elif(month = 2):
-  print("February")
-elif(month = 3):
-  print("March")
-elif(month = 4):
-  print("April")
-elif(month = 5):
-  print("May")
-elif(month = 6):
-  print("June")
-elif(month = 7):
-  print("July")
-elif(month = 8):
-  print("August")
-elif(month = 9):
-  print("September")
-elif(month = 10):
-  print("October")
-elif(month = 11 ):
-  print("Novemeber")
-elif(month = 12):
-  print("December")
+if(month == 1):
+    print("January")
+elif(month == 2):
+    print("February")
+elif(month == 3):
+    print("March")
+elif(month == 4):
+    print("April")
+elif(month == 5):
+    print("May")
+elif(month == 6):
+    print("June")
+elif(month == 7):
+    print("July")
+elif(month == 8):
+    print("August")
+elif(month == 9):
+    print("September")
+elif(month == 10):
+    print("October")
+elif(month == 11 ):
+    print("Novemeber")
+elif(month == 12):
+    print("December")
 else:
   print("error")
 
@@ -104,13 +104,13 @@ else:
 number = 0
 
 if(0 <= number and number <= 10):
-  print(number, "is between 0-10")
+    print(number, "is between 0-10")
 elif(10 < number and number <=20):
-  print(number, "is between 10-20")
+    print(number, "is between 10-20")
 elif(20 < number and number <= 30):
-  print(number, "is between 20 and 30")
+    print(number, "is between 20 and 30")
 else:
-  print(number, "is not in the range")
+    print(number, "is not in the range")
   
 
 #Write a program to convert roman numerals to integers
@@ -118,15 +118,15 @@ else:
 numeral = "X"
 
 if(numeral == "I"):
-  print(1)
+    print(1)
 elif(numeral == "V"):
-  print(5)
-elif(numberal == "X"):
-  print(10)
+    print(5)
+elif(numeral == "X"):
+    print(10)
 elif(numeral == "L"):
-  print(50)
+    print(50)
 else:
-  print("not recognized")
+    print("not recognized")
 
 
 

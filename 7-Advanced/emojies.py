@@ -12,7 +12,7 @@ print("\U0001F923")
 emojies = {}
 for x in range(128512,129488): #129488
 
-  emojies[chr(x)] = hex(x)
+    emojies[chr(x)] = hex(x)
 
 print(emojies)
 # print(str(emojies).replace(",",",\n"))

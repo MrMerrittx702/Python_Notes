@@ -79,31 +79,31 @@ Use nested while loops to iterate
 #Outer loop
 row = 0 #start at the first list 
 while( row < len(list2d) ): #OR row <= len(list2d)-1 ; stop at last list
-  ...
-  row += 1 #increment by 1
+    ...
+    row += 1 #increment by 1
 #exit outer while
 
 #Inner Loop
 col = 0 #start at first item
 while( col < len(list2d[row]) ): #OR col <= len(list2d[row])-1 ; stop at last item
-  ...
-  col += 1 #increment by 1
+    ...
+    col += 1 #increment by 1
 #exit inner loop
 
 'The inner loop goes inside of the outer loop'
-#Outer loop---------------------------------------#
-row = 0                                           #
-while( row < len(list2d) ):                       #
-                                                  #
-  #Inner Loop-------------------------#           #
-  col = 0 #start at first item        #           #
-  while( col < len(list2d[row]) ):    #           #
-    ...                               #           #
-    col += 1                          #           #
-  #exit inner loop--------------------#           #
-                                                  #
-  row += 1                                        # 
-#exit outer while---------------------------------#
+#Outer loop-------------------------------------------#
+row = 0                                               #
+while( row < len(list2d) ):                           #
+                                                      #
+    #Inner Loop---------------------------#           #
+    col = 0 #start at first item          #           #
+    while( col < len(list2d[row]) ):      #           #
+        ...                               #           #
+        col += 1                          #           #
+    #exit inner loop----------------------#           #
+                                                      #
+    row += 1                                          # 
+#exit outer while-------------------------------------#
 
 
 
@@ -113,15 +113,15 @@ while( row < len(list2d) ):                       #
 row = 0 #start at the first list index
 while row < len(list2d): # or <= len(list2d)-1
 
-  col = 0 #start at the first element index
-  while col < len(list2d[row]): # or <= len(list2d[row])-1
-    
-    print(row, col, end = "|") #printing indexes
-    print(list2d[row][col], end = ", ") #printing elements
+    col = 0 #start at the first element index
+    while col < len(list2d[row]): # or <= len(list2d[row])-1
+        
+        print(row, col, end = "|") #printing indexes
+        print(list2d[row][col], end = ", ") #printing elements
 
-    col += 1 #increment by 1
+        col += 1 #increment by 1
 
-  row += 1 #increment by 1
+    row += 1 #increment by 1
 
 #end =" " is just for formatting the output
 #===============================================================================================================================#
@@ -130,15 +130,15 @@ while row < len(list2d): # or <= len(list2d)-1
 row = len(list2d) - 1 #start at the last list index
 while row >= 0: # or > -1 #stop at the first list index
 
-  col = len(list2d[row]) - 1 #start at the last element index
-  while col >= 0: # or > -1 #stop at the first element index
-    
-    print(row, col, end = "|") #printing indexes
-    print(list2d[row][col], end = ", ") #printing elements
+    col = len(list2d[row]) - 1 #start at the last element index
+    while col >= 0: # or > -1 #stop at the first element index
+        
+        print(row, col, end = "|") #printing indexes
+        print(list2d[row][col], end = ", ") #printing elements
 
-    col -= 1 #decrement by 1
+        col -= 1 #decrement by 1
 
-  row -= 1 #decrement by 1
+    row -= 1 #decrement by 1
 
 
 
@@ -166,15 +166,15 @@ count = 0
 row = 0
 while row < len(list2d): # or <= len(list2d)-1
 
-  col = 0
-  while col < len(list2d[row]): # or <= len(list2d[row])-1
+    col = 0
+    while col < len(list2d[row]): # or <= len(list2d[row])-1
+        
+        if(5 == list2d[row][col]):
+            count += 1
+        
+        col += 1
     
-    if(5 == list2d[row][col]):
-      count += 1
-    
-    col += 1
-  
-  row += 1
+    row += 1
 
 print(count)
 
@@ -190,19 +190,19 @@ y_count = 0
 row = 0
 while row < len(list2d): # or <= len(list2d)-1
 
-  col = 0
-  while col < len(list2d[row]): # or <= len(list2d[row])-1
+    col = 0
+    while col < len(list2d[row]): # or <= len(list2d[row])-1
+        
+        if(1 == list2d[row][col]):
+            x_count += 1
+            list2d[row][col] = "X"
+        else:
+            y_count += 1
+            list2d[row][col] = "Y"
+        
+        col += 1
     
-    if(1 == list2d[row][col]):
-      x_count += 1
-      list2d[row][col] = "X"
-    else:
-      y_count += 1
-      list2d[row][col] = "Y"
-    
-    col += 1
-  
-  row += 1
+    row += 1
 
 print(list2d)
 print(f"X count = {x_count}")    #X count = 295
@@ -228,24 +228,21 @@ list2d = [
 row = 0
 while row < len(list2d): 
 
-  if(0 == row % 2):
-    col = 0
-    while col < len(list2d[row]): 
-      
-      print(list2d[row][col],end = ",") 
-      
-      col += 1
-  else:
-    col = len(list2d[row])-1
-    while col > -1: 
+    if(0 == row % 2):
+        col = 0
+        while col < len(list2d[row]): 
+        
+            print(list2d[row][col],end = ",") 
+            col += 1
+    else:
+        col = len(list2d[row])-1
+        while col > -1: 
+        
+            print(list2d[row][col],end = ",") 
+            col -= 1
+    print()
     
-      print(list2d[row][col],end = ",") 
-     
-    
-      col -= 1
-  print()
-  
-  row += 1
+    row += 1
 
 # 0,1,2,3,4,
 # 4,3,2,1,0,

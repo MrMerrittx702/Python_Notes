@@ -139,6 +139,9 @@ True          # boolean(True or False)
 '''
 #The type() function can be used to check the type of data
 type()
+type(5) # <class 'int'>
+type("text") # <class 'str'>
+
 
 
 #For large numbers you can use underscores(_) to make them more readable

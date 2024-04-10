@@ -1,4 +1,4 @@
-import math
+import math #importing the builtin math module.
 
 # Constants
 math.pi   # Mathematical constant π (pi)

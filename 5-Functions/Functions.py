@@ -75,41 +75,40 @@ def count_to(number):
 condition = True or False
 
 if(condition):
-  #start of the if code block
-  print("Inside the if statement")
+    #start of the if code block
+    print("Inside the if statement")
 
 #end of the if code block
 while(condition):
-  #start of the while code block
-  print("Inside the while loop")
+    #start of the while code block
+    print("Inside the while loop")
 
 #end of the while code block
 for _ in range(10):
-  #start of the for code block
-  print("Inside the for loop")
+    #start of the for code block
+    print("Inside the for loop")
 
 #end of the for code block
 def function_():
-  #start of the function code block
-  print("Inside of the function definition")
+    #start of the function code block
+    print("Inside of the function definition")
 
 #end of the function code block
   
 #Nested Indentation# Blocks inside of blocks
 def example_():
-  #start of function code block--------------------------#
-  for _ in range(5):                                     #
-    #start of for code block----------------------#      #
-    while(condition):                             #      #
-      #start of while code block -----------#     #      #      
-      if(condition):                        #     #      #
-        #Start of if code block ------#     #     #      #
-        print("So many indents!")     #     #     #      #
-      #end of if code block-----------#     #     #      #
-    #end of while code block----------------#     #      #
-  #end of for code block--------------------------#      #
-#end of function code block------------------------------#
-
+    #start of function code block--------------------------#
+    for _ in range(5):                                     #
+        #start of for code block----------------------#    #
+        while(condition):                             #    #
+            #start of while code block -----------#   #    #      
+            if(condition):                        #   #    #
+                #Start of if code block ------#   #   #    #
+                print("So many indents!")     #   #   #    #
+            #end of if code block-------------#   #   #    #
+        #end of while code block------------------#   #    #
+    #end of for code block----------------------------#    #
+#end of function code block--------------------------------#
 
 '''
 Note:
@@ -159,7 +158,7 @@ count_to(10)# 1 2 3 4 5 6 7 8 9 10
 
 #function definition
 def function_name():
-   return "Hello World" #returning exits the function  
+    return "Hello World" #returning exits the function  
 
 #Function Call
 function_name() #returns Hello World
@@ -173,7 +172,7 @@ result = function_name() #assigns the return
 ' > Functions can return multiple values as a tuple'
 
 def return_multiple():
-   return "a", "b", "c" #return values are seperated with a comma
+    return "a", "b", "c" #return values are seperated with a comma
 
 #Assigning each value to a variable
 first, second, third = return_multiple()
@@ -203,12 +202,12 @@ print(third) # c
 
 
 #def function_name(parameter1, parameter2, ...):
-#-------------------------------------------------------------------------#
-def has_parameters(parameter_1,parameter_2):                              #
-  #separate multiple parameters with comma ","                            #
-  print(parameter_1)                                                      #        
-  print(parameter_2)                                                      #
-#-------------------------------------------------------------------------#
+#---------------------------------------------------------------------------#
+def has_parameters(parameter_1,parameter_2):                                #
+    #separate multiple parameters with comma ","                            #
+    print(parameter_1)                                                      #        
+    print(parameter_2)                                                      #
+#---------------------------------------------------------------------------#
 
 #calling
 has_parameters("Hello", "World") 
@@ -218,8 +217,8 @@ has_parameters("Hello", "World")
 
 #example
 def calc_product(x,y):#parameters here
-  product = x * y
-  return product
+    product = x * y
+    return product
 
 calc_product(4,3)# arguments here
 
@@ -231,7 +230,7 @@ calc_product(4,3)# arguments here
 
 #Default argument values
 def has_defaults(p1,p2 = "p2 is defualt",p3 = "p3 is defualt"):
-   return p1,p2,p3
+    return p1,p2,p3
 
 first, second, third = has_defaults("p1 is required", "p2 is optional")
 
@@ -265,11 +264,11 @@ example() # 5
 
 
 #
-#Definition----------------------------------------------------------------#
-def accepts_arguments(parameter_1,parameter_2):                           #
-  print(parameter_1)                                                      #
-  print(parameter_2)                                                      #
-#-------------------------------------------------------------------------#
+#Definition-----------------------------------------------------------------#
+def accepts_arguments(parameter_1,parameter_2):                             #
+    print(parameter_1)                                                      #
+    print(parameter_2)                                                      #
+#---------------------------------------------------------------------------#
 
 
 #Function Call
@@ -278,8 +277,8 @@ accepts_arguments("Hello", "World")
 
 #example
 def calc_product(x,y): #parameters here
-  product = x * y
-  return product
+    product = x * y
+    return product
 
 calc_product(4,3) #arguments here
 
@@ -302,9 +301,9 @@ calc_product(4,3) #arguments here
 
 #position        1       2      3
 def positional(first, second, third):
-   print(first)
-   print(second)
-   print(third)
+    print(first)
+    print(second)
+    print(third)
 
 #postion    1    2    3
 positional("a", "b" ,"c")
@@ -318,7 +317,7 @@ positional("a", "b" ,"c")
 
 
 def unpack_positional(a,b,c,d,e):
-   return [a,b,c,d,e]
+    return [a,b,c,d,e]
 
 arguments = (1,2,3,4,5)
 result = unpack_positional(*arguments) 
@@ -341,7 +340,7 @@ print(list(range(*nums)))  # [1,2,3,4,5,6,7,8,9]
 
 #def function_name(pos1,pos2,/,pos_or_kwd,*,kwd1,kwd2): positional only, positional or keyword, keyword only
 def position_forced(p1,p2,/):
-  return p1, p2
+    return p1, p2
 
 position_forced(p2 = "World", p1 = "Hello")
 # TypeError: position_forced() got some positional-only arguments passed as keyword arguments: 'p1, p2'
@@ -351,7 +350,7 @@ position_forced(p2 = "World", p1 = "Hello")
 ' > assigned based on name'
 
 def keyword(name, age, grade, school):
-   return f"Hello {name}, you are {age} years old, in grade {grade}, and attend {school}"
+    return f"Hello {name}, you are {age} years old, in grade {grade}, and attend {school}"
 
 #instead of positional assignment
 keyword("Sam", 16, 11, "LWM Academy")
@@ -363,14 +362,14 @@ keyword(grade = 11, name = "Sam", school = "LWM Academy", age = 16)
 ' > Use the ** character to unpack dictionaries as keyword arguments'
 
 def unpack_keyword(name, age, grad, school):
-   return f"Hello {name}, you are {age} years old, you are in {grad} school, and attend {school}"
+    return f"Hello {name}, you are {age} years old, you are in {grad} school, and attend {school}"
 
 #Dictionary containing the arguments 
 keyword_args = {
-  "school": "MIT",
-  "name" : "Sam",
-  "age" : 20, 
-  "grad" : "undergraduate"
+    "school": "MIT",
+    "name" : "Sam",
+    "age" : 20, 
+    "grad" : "undergraduate"
 }
 
 unpack_keyword(**keyword_args)
@@ -400,7 +399,7 @@ display_data(**data)
 #                    |                                - Keyword only
 #                     -- Positional only
 def forced_keywords(*,name, age, grade, school):
-   return f"Hello {name}, you are {age} years old, in grade {grade}, and attend {school}"
+    return f"Hello {name}, you are {age} years old, in grade {grade}, and attend {school}"
 
 forced_keywords("Sam",18, 12, "Xavier's School for Gifted Youngsters")
 # TypeError: forced_keywords() takes 0 positional arguments but 4 were given
@@ -442,7 +441,7 @@ def concat(*args, sep = "/"):# parameters after *args are keyword only
 
 #args can be treated as a tuple
 def arbitrary_arguments(*args): #any parameters after *args must be keyword
-  print(args)
+    print(args)
 
 arbitrary_arguments() # 
 arbitrary_arguments(1)# 1
@@ -451,7 +450,7 @@ arbitrary_arguments(1,2,3)# 1 2 3
 
 #kwargs can be treated as a dictionary
 def arbitrary_keywords(**kwargs): #any positional args must come before **kwargs
-  print(kwargs)
+    print(kwargs)
 
 arbitrary_keywords()# {}
 arbitrary_keywords(name = "sam") # {'name': 'sam'}
@@ -465,11 +464,11 @@ arbitrary_keywords(name = "sam", age = "40", phone = "123-456-7890") \
 # Global variables defined outside of functions are visible everywhere.
 
 global_ = 0
-#Local Exists Here--------#
-def example(local_):      #
-  print(global_)          #
-  print(local_)           #
-#-------------------------#
+#Local Exists Here----------#
+def example(local_):        #
+    print(global_)          #
+    print(local_)           #
+#---------------------------#
   
 example(1)
 #0
@@ -481,8 +480,8 @@ print(global_) # 0
 
 var = 0 #global 'var'
 def modify_global():
-  var = 1 #local 'var' only exists in the function
-  print(var)# --> 1
+    var = 1 #local 'var' only exists in the function
+    print(var)# --> 1
   
 
 modify_global()  # 1
@@ -496,9 +495,9 @@ is referring to a global variable, not a local one.
 var = 0 #global 'var'
 
 def modify_global():
-  global var # declares that var is global, not local
-  var = 1 #assigns global 'var" 
-  print(var)# --> 1
+    global var # declares that var is global, not local
+    var = 1 #assigns global 'var" 
+    print(var)# --> 1
   
 
 modify_global()  # 1
@@ -613,7 +612,7 @@ lambda_function(1,2,3) #returns 6
 
 #Create a lambda as a functions return
 def returns_lambda(n):
-  return lambda a : a ** n
+    return lambda a : a ** n
 #returns a lambda that returns a to the power of n
 squared = returns_lambda(2) # lambda a : a ** 2
 cubed = returns_lambda(3)   # lambda a : a ** 3
@@ -674,20 +673,20 @@ print(multi_line_docstring.__doc__)
 
 "def function(parameter: type) -> return_type:"
 def sum_ints(a: int, b: int) -> int:
-  return a + b
+    return a + b
 #expects integer arguments, integer return
 
 def sum_floats(x:float, y:float) -> float:
-  return x + y
+    return x + y
 #expects float arguments, float return
 
 
 def sum_list(list1d: list[int]) -> int:
-  total = 0
-  for elem in list1d:
-    total += elem
+    total = 0
+    for elem in list1d:
+        total += elem
 
-  return total
+    return total
 #expects float arguments, float return
 
 #===============================================================================================================================
@@ -696,30 +695,30 @@ def sum_list(list1d: list[int]) -> int:
 #Conditionals, While Loops, and For loops can all be used inside of functions.
 
 def add(a,b):
-  answer = a + b
-  return answer
+    answer = a + b
+    return answer
 
 def calc_velocity(distance, time):
-  velocity = distance / time
-  return velocity
+    velocity = distance / time
+    return velocity
 
 def calc_slope(x1,y1,x2,y2):
-  slope = ((y2-y1)/(x2-x1))
-  return slope
+    slope = ((y2-y1)/(x2-x1))
+    return slope
 
 def get_quadratic(x, a, b):
-  #where (x + a) (x + b) == x**2 + (a+b)x + ab
-  #where x is a string
-  return f"{x}^2 + {a+b}x + {a*b}"
+    #where (x + a) (x + b) == x**2 + (a+b)x + ab
+    #where x is a string
+    return f"{x}^2 + {a+b}x + {a*b}"
 
 print(get_quadratic("x",3,4))
 
 
 def even_or_odd(num):
-  if(num % 2 == 0):
-    print("num is even")
-  else:
-    print("num is odd")
+    if(num % 2 == 0):
+        print("num is even")
+    else:
+        print("num is odd")
 
 #calls
 even_or_odd(1)
@@ -728,11 +727,11 @@ even_or_odd(3)
 even_or_odd(4)
 
 def count_up(start, stop, step):
-  count = start
-  while (count <= stop):
-    print(count, end= " ")
-    count += step
-  print()
+    count = start
+    while (count <= stop):
+        print(count, end= " ")
+        count += step
+    print()
 
 #calls
 count_up(1,10,1)
@@ -742,9 +741,9 @@ count_up(5,500,5)
 count_up(40,60,2)
 
 def count_for(start, stop, step):
-  for count in range(start, stop, step):
-    print(count, end = " ")
-  print()
+    for count in range(start, stop, step):
+        print(count, end = " ")
+    print()
 
 #calls
 count_for(0,-36,-1)
@@ -754,45 +753,45 @@ count_for(-5,16,5)
 
 
 def count_vowels(sentence):
-  vowels = "aeiou"
-  vowel_count = 0
+    vowels = "aeiou"
+    vowel_count = 0
 
-  for char in sentence:
-    if char in vowels:
-      vowel_count += 1
-  
-  return vowel_count
+    for char in sentence:
+        if char in vowels:
+            vowel_count += 1
+    
+    return vowel_count
 
 print(count_vowels("The quick brown fox jumps over the lazy dog."))
 
 
 def get_sum(alist):
-  total = 0
-  for num in alist:
-    total = total + num 
-    #total += num
-  return total
+    total = 0
+    for num in alist:
+        total = total + num 
+        #total += num
+    return total
 
 list1d = [1,2,3,4,5,6,7,8,9]
 print(get_sum(list1d))
 
 def get_max(alist):
-  max_num = alist[0]
-  for num in alist:
-    if num > max_num:
-      max_num = num
-  return max_num
+    max_num = alist[0]
+    for num in alist:
+        if num > max_num:
+            max_num = num
+    return max_num
 
 list1d = [0,5,2,20,8,6,1,10,19]
 print(get_max(list1d))
 
 def count_vowels(alist):
-  count = 0
-  vowels = "aeiou"
-  for elem in alist:
-    if elem in vowels:
-      count +=1
-  return count
+    count = 0
+    vowels = "aeiou"
+    for elem in alist:
+        if elem in vowels:
+            count +=1
+    return count
 
 letters = ["a","b","c","d","e"]
 print(count_vowels(letters))

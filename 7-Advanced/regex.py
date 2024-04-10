@@ -63,9 +63,9 @@ pattern = r"(\w+)[@](\w+)[\.](com|net|org)"
 match = re.search(pattern,text)
 
 if match.group() == text:
-  print("Valid Email : ", match.group())
+    print("Valid Email : ", match.group())
 else:
-  print("Invalid Email")
+    print("Invalid Email")
 
 
 

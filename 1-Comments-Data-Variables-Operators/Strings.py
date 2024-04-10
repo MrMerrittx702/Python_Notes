@@ -185,64 +185,50 @@ def unicode_lookup(character, print_table=False):
 # \n  newline character, used to insert a new line.
 print( "First line\nSecond line")
 #                 ^ 
+# First line 
+# Second line
+
 
 # \t tab character, used to insert horizontal spacing.
 print( "First\tSecond\tThird" )
 #            ^       ^
+# First   Second  Third
+
 
 # \\ single backslash character
 print( "C:\\Users\\Username\\Documents" )
 #         ^      ^         ^
+# C:\Users\Username\Documents 
+
 
 # \' single quote 
 print('It\'s an escaped character!')
 #        ^
+# It's an escaped character!
+
 
 # \" double quote 
 print("\"Look out for double\"")
 #      ^                    ^
+# "Look out for double"
 
 #\r carriage return character, used to return the cursor to the beginning of the line.
 print("123\rabc")
 #         ^
+# abc
+
 
 #\b backspace character, used to delete the preceding character.
 print("abc\bd")
 #         ^
+# abd
+
 
 #\ form feed character, used to advance to the next page or form
 print("Page 1\fPage 2")
 #            ^
 
-#===============================================================================================================================#
-'> Converting Characters'
-#There are built-in function calls that can be used to convert between characters and their encodings.
 
-#bin(num) returns the binary representation of a whole number (integer) 
-bin(32) #0b100000
-
-#hex(num) returns the hexadecimal representation of a whole number (integer) 
-hex(32) # 0x20
-
-#oct(num) returns the octal representation of a whole number (integer) 
-oct(32) # 0o40
-
-#ord(string) returns the Decimal Unicode value of a single character string
-ord("a") # 97
-
-#chr(num) returns the single character Unicode string for a given integer
-chr(97) # a
-
-#decimal to ascii converter ==============================#
-print("Please enter a number")                            #
-str_ = input()                                            #
-num = int(str_)                                           #                                                         
-print("binary " + bin(num))                               #
-print("hexadecimal " + hex(num))                          #
-print("octal " + oct(num))                                #
-print("unicode " + str(ord(str_)))                        #
-print("character " + str(chr(num)))                       #
-#=========================================================#
 #===============================================================================================================================#
 '> Strings Defined'
 '>> Strings are immutable (cannot be changed) sequences of characters.'
@@ -255,15 +241,15 @@ print("character " + str(chr(num)))                       #
 str_ = "String of Text"
 
 #String literals can span multiple lines and automatically include the newline character at the end
-#use \ to remove the automatice newline character.
-print("""\  
-line 1
-line 2
-line 3
+#use \ to remove the automatic newline character at the end(does not work for the first line).
+print("""  
+line 1\
+line 2\
+line 3\
 """) 
 
 #more technically strings are objects of the 'str' class in python
-print(type("My String")) # <class 'str">
+print(type("My String")) # <class 'str'>
 
 #===============================================================================================================================#
 '> Strings Concatenation and Duplication'
@@ -284,7 +270,7 @@ print(type("My String")) # <class 'str">
 #          ^ don't forget the space
 
 #to duplicate strings use *
-"a"*3 # aaa
+"a" * 3 # aaa
 
 
 #===============================================================================================================================#
@@ -292,7 +278,8 @@ print(type("My String")) # <class 'str">
 
 '''
 Lexicographical Comparison: 
-  compares strings character by character, based on their Unicode values. 
+  compares strings character by character, based on their Unicode values.
+  can be used to compare characters and strings alphabetically 
 
   Compare the first character of each string. 
   If they are equal, move on to the next character there are unequal characters 
@@ -321,7 +308,7 @@ str4 = "abcd"
 
 str3 < str4 # True (even though 'abc' is shorter)
 
-'You can generate a unicode dictionary with the cod below'
+'You can generate a unicode dictionary with the code below'
 def gen_unicode_table(start = 1, stop = 1024):
   table = {"Character" : ("Unicode", "Decimal")}
   for num in range(start,stop+1):
@@ -333,9 +320,11 @@ gen_unicode_table()
 
 #===============================================================================================================================#
 '> String Indexing'
-#strings can be indexed like lists
-#each character is given a number starting from 0
-#don't forget spaces!
+' > are a sequence or string of characters.'
+' > can be thought of as a list of characters.'
+' > strings can be indexed like lists'
+' > each character is given an index starting from 0.'
+' > do not forget about spaces.'
 
 
 '''
@@ -361,13 +350,19 @@ print( word[-3] )# i
 
 word = "Programming"
 
+'''
+String -->  P   r   o  g  r  a  m  m  i  n  g
+Index  -->  0   1   2  3  4  5  6  7  8  9  10
+Reverse--> -11 -10 -9 -8 -7 -6 -5 -4 -3 -2 -1 
+'''
+
 #slicing returns a substring (or a part of the original string)
-#list[start_index:stop_index] 
-print(word[:5])  # Progr
-print(word[4:])  # amming
-print(word[0:7]) # Program
-print(word[3:11])# gramming
-print(word[-5:-1]) #mmin
+#list[start_index:stop_index] Note: the stop_index is not included
+print(word[:5])    # Progr
+print(word[4:])    # ramming
+print(word[0:7])   # Program
+print(word[3:11])  # gramming
+print(word[-5:-1]) # mmin
 #note the stop_index is not included in the slice
 
 #python strings are immutable (cannot be changed)
@@ -380,6 +375,12 @@ print(word[-5:-1]) #mmin
 #len(x)  returns the number of characters in the string (note: spaces count as characters)
 len(word) # 11
 len(word)-1 # 10 --> the last index of the word
+
+# Returns the maximum character (according to Unicode code point) in a string.
+max(word) # r
+
+#  Returns the minimum character (according to Unicode code point) in a string.
+min(word) # P
 
 
 #===============================================================================================================================#
@@ -869,7 +870,7 @@ b'\x48\x65\x6C\x6C\x6F' #bytes literal
 print(b'\x48\x65\x6C\x6C\x6F'.decode()) # Hello
 print(b'Hello') # b'Hello'
 
-#Function to display t
+#Function to display the bytes
 def return_bytes(bytes):
   string = r""
   for byte in bytes:
@@ -883,7 +884,7 @@ return_bytes(b"hello")
 
 
 
-
+ 
 
 
 

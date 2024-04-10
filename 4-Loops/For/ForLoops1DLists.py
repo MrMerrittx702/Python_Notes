@@ -71,11 +71,8 @@ start = 0; stop = len(list1d); step = 1
 
 #using index instead of count
 for index in range(start, stop, step):
-  #indent 2 spaces for code in the block
-  #--------------------------#
-  #code block to execute here#
-  #--------------------------#
-  pass #ignore this line
+    #indent 4 spaces for code in the block
+    ... #code block to execute here#
 #unindent to leave the block
 
 #===============================================================================================================================#
@@ -88,23 +85,23 @@ list1d = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'] #declare and initialize
 
 #simple and quick plus indexes
 for index in range(len(list1d)): # 0 (default) to last index by 1s (default)
-  print(index, end ="|") #printing indexes
-  print(list1d[index],end = ",") #printing elements 
+    print(index, end ="|") #printing indexes
+    print(list1d[index],end = ",") #printing elements 
 
 #more control with range(start, stop, step)
 for index in range(0,len(list1d),1): # 0 to last index by 1s
-  print(index, end ="|") #printing indexes
-  print(list1d[index],end = ",") #printing elements
+    print(index, end ="|") #printing indexes
+    print(list1d[index],end = ",") #printing elements
 
 #forward only and elements only
 for element in list1d:
-  print(element, end = " ")#printing elements
-  #you cannot access indexes this way
+    print(element, end = " ")#printing elements
+    #you cannot access indexes this way
 
 #forward only indexes and elements
 for index, element in enumerate(list1d):
-  print(index, end ="|") #printing indexes
-  print(element, end = ",")#printing elements
+    print(index, end ="|") #printing indexes
+    print(element, end = ",")#printing elements
 #enumerate returns and enumerate object, basically (index, element)
   
 #===============================================================================================================================#
@@ -117,8 +114,8 @@ list1d = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'] #declare and initialize
 
 #start=last_index; stop = first_index-1; step = decrement by 1
 for index in range(len(list1d)-1,-1,-1):#last index to 0 by 1s 
-  print(index, end ="|") #printing indexes
-  print(list1d[index],end = ",") #printing elements
+    print(index, end ="|") #printing indexes
+    print(list1d[index],end = ",") #printing elements
 
 #end ="|" is just for formatting the output
 #===============================================================================================================================#
@@ -175,12 +172,12 @@ list1d = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'] #declare and initialize
 
 #start=first_index; stop = middle_index-1; step = increment by 1
 for index in range(int(len(list1d)/2)): #start 0 (default), step by 1s (default)
-  print(index, end ="|") #printing indexes
-  print(list1d[index],end = ",") #printing elements
+    print(index, end ="|") #printing indexes
+    print(list1d[index],end = ",") #printing elements
 
 for index in range(0, len(list1d)//2, 1): 
-  print(index, end ="|") #printing indexes
-  print(list1d[index],end = ",") #printing elements
+    print(index, end ="|") #printing indexes
+    print(list1d[index],end = ",") #printing elements
 
 
 #end =" " is just for formatting the output
@@ -195,8 +192,8 @@ list1d = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'] #declare and initialize
 
 #start=middle_index-1; stop = first_index-1; step = decrement by 1
 for index in range((len(list1d)//2)-1,-1,-1):
-  print(index, end ="|") #printing indexes
-  print(list1d[index],end = ",") #printing elements
+    print(index, end ="|") #printing indexes
+    print(list1d[index],end = ",") #printing elements
 
 #end =" " is just for formatting the output
 #===============================================================================================================================#
@@ -209,12 +206,12 @@ list1d = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'] #declare and initialize
 
 #start=middle_index; stop = last_index; step = increment by 1
 for index in range(len(list1d)//2, len(list1d)): # by 1s (default)
-  print(index, end ="|") #printing indexes
-  print(list1d[index],end = ",") #printing elements
+    print(index, end ="|") #printing indexes
+    print(list1d[index],end = ",") #printing elements
 
 for index in range(len(list1d)//2, len(list1d), 1): 
-  print(index, end ="|") #printing indexes
-  print(list1d[index],end = ",") #printing elements
+    print(index, end ="|") #printing indexes
+    print(list1d[index],end = ",") #printing elements
 
 
 
@@ -229,8 +226,8 @@ list1d = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'] #declare and initialize
 
 #start=last_index; stop = middle_index; step = decrement by 1
 for index in range(len(list1d)-1, (len(list1d)//2)-1, -1): 
-  print(index, end ="|") #printing indexes
-  print(list1d[index],end = ",") #printing elements
+    print(index, end ="|") #printing indexes
+    print(list1d[index],end = ",") #printing elements
 
 #end =" " is just for formatting the output
 #===============================================================================================================================#

@@ -39,41 +39,40 @@ Covered in this file:
 condition = True or False
 
 if(condition):
-  #start of the if code block
-  print("Inside the if statement")
+    #start of the if code block
+    print("Inside the if statement")
 
 #end of the if code block
 while(condition):
-  #start of the while code block
-  print("Inside the while loop")
+    #start of the while code block
+    print("Inside the while loop")
 
 #end of the while code block
 for _ in range(10):
-  #start of the for code block
-  print("Inside the for loop")
+    #start of the for code block
+    print("Inside the for loop")
 
 #end of the for code block
 def function_():
-  #start of the function code block
-  print("Inside of the function definition")
+    #start of the function code block
+    print("Inside of the function definition")
 
 #end of the function code block
   
 #Nested Indentation# Blocks inside of blocks
 def example_():
-  #start of function code block--------------------------#
-  for _ in range(5):                                     #
-    #start of for code block----------------------#      #
-    while(condition):                             #      #
-      #start of while code block -----------#     #      #      
-      if(condition):                        #     #      #
-        #Start of if code block ------#     #     #      #
-        print("So many indents!")     #     #     #      #
-      #end of if code block-----------#     #     #      #
-    #end of while code block----------------#     #      #
-  #end of for code block--------------------------#      #
-#end of function code block------------------------------#
-
+    #start of function code block--------------------------#
+    for _ in range(5):                                     #
+        #start of for code block----------------------#    #
+        while(condition):                             #    #
+            #start of while code block -----------#   #    #      
+            if(condition):                        #   #    #
+                #Start of if code block ------#   #   #    #
+                print("So many indents!")     #   #   #    #
+            #end of if code block-------------#   #   #    #
+        #end of while code block------------------#   #    #
+    #end of for code block----------------------------#    #
+#end of function code block--------------------------------#
 
 '''
 Note:
@@ -89,15 +88,15 @@ condition = True or False
 
 
 while(condition):
-  #indent 2 spaces to be inside of the loop block
-  'repeat this code block'
-#unindent 2 spaces to exit the loop block
+    #indent 4 spaces to be inside of the loop block
+    'repeat this code block'
+#unindent 4 spaces to exit the loop block
 
-#----------------------------------#
-while(condition): #-----------#    #
-  'repeat this code block'    #    #
-  #---------------------------#    #
-#----------------------------------#
+#------------------------------------#
+while(condition): #-------------#    #
+    'repeat this code block'    #    #
+    #---------------------------#    #
+#------------------------------------#
 
 
 #===============================================================================================================================#
@@ -108,9 +107,9 @@ while(condition): #-----------#    #
 count = 0 #this is the control variable
 
 while count < 5: #stops the loop when count is >= 5
-  'repeat this code'
-  count = count + 1 #increases count each time the loop occurs
-  #count += 1 is shorthand for the line above
+    'repeat this code'
+    count = count + 1 #increases count each time the loop occurs
+    #count += 1 is shorthand for the line above
 
 #pay attention to the indentation
 
@@ -125,10 +124,10 @@ step =1 #step: how much to increase or decrease by each time
 count = start
 while(count < stop):  #can be > < >= or <= stop
 
-  count = count + step # can be + - * / % ...
+    count = count + step # can be + - * / % ...
 
-  #or use the compound assignment operators
-  count += step   #can be += -= *= /= ... 
+    #or use the compound assignment operators
+    count += step   #can be += -= *= /= ... 
 
 
 #===============================================================================================================================#
@@ -139,15 +138,15 @@ while(count < stop):  #can be > < >= or <= stop
 '0 to Positive By 1s'
 i = 0 #start at 0
 while(i < 5): #stop when i is 5  (i <= 4)
-  print(i, end = " ") #print out i with a space at the end
-  i += 1 #step  increment i by 1
+    print(i, end = " ") #print out i with a space at the end
+    i += 1 #step  increment i by 1
 # 0 1 2 3 4 
 
 '0 to Positive By Multiples'
 i = 0 #start at 0
 while(i < 5): #stop when i is 5  (i <= 4)
-  print(i, end = " ") #print out i with a space at the end
-  i += 2 #step  increment i by 2
+    print(i, end = " ") #print out i with a space at the end
+    i += 2 #step  increment i by 2
 # 0 2 4 
 #++++++++++++++++++++++++++++++++++++++#
 #++++++++++++++++++++++++++++++++++++++#
@@ -155,76 +154,76 @@ while(i < 5): #stop when i is 5  (i <= 4)
 #From 1 to positive
 i = 1 #start 
 while (i < 6): #stop (i <= 5)
-  print(i, end = " ")
-  i += 1 #step  increment i by 1
+    print(i, end = " ")
+    i += 1 #step  increment i by 1
 # 1 2 3 4 5 
 
 'From 1 to Positive by Multiples'
 i = 1 #start 
 while (i < 6): #stop (i <= 5)
-  print(i, end = " ")
-  i += 3 #step  increment i by 3
+    print(i, end = " ")
+    i += 3 #step  increment i by 3
 # 1 4 
 #++++++++++++++++++++++++++++++++++++++# 
 #++++++++++++++++++++++++++++++++++++++#
 'From Positive to Positive by 1s'
 i = 10 #start
 while( i < 21): #stop (i <= 20)
-  print(i, end = " ")
-  i+=1 #step  increment i by 1
+    print(i, end = " ")
+    i+=1 #step  increment i by 1
 # 10 11 12 13 14 15 16 17 18 19 20 
   
 'From Positive to Positive by Mutliples'
 i = 10 #start
 while( i < 21): #stop (i <= 20)
-  print(i, end = " ")
-  i+=5 #step  increment i by 5
+    print(i, end = " ")
+    i+=5 #step  increment i by 5
 # 10 15 20 
 #++++++++++++++++++++++++++++++++++++++#  
 #++++++++++++++++++++++++++++++++++++++#
 'From Negative to 0 by 1s'
 i = -5 #start
 while(i < 1): #stop (i <= 0)
-  print(i, end = " ")
-  i+=1  #step increment i by 1
+    print(i, end = " ")
+    i+=1  #step increment i by 1
 # -5 -4 -3 -2 -1 0 
 
 'From Negative to 0 by Multiples'
 i = -5 #start
 while(i < 1): #stop (i <= 0)
-  print(i, end = " ")
-  i+=3  #step increment i by 3
+    print(i, end = " ")
+    i+=3  #step increment i by 3
 # -5 -2 
 #++++++++++++++++++++++++++++++++++++++#
 #++++++++++++++++++++++++++++++++++++++#
 'From Negative to Negative by 1s'
 i = -10 #start
 while(i < -4): #stop (i <= -5)
-  print(i, end = " ")
-  i+=1 #step  increment i by 1
+    print(i, end = " ")
+    i+=1 #step  increment i by 1
 # -10 -9 -8 -7 -6 -5 
 
 'From Negative to Negative by Multiples'
 i = -10 #start
 while(i < -4): #stop (i <= -5)
-  print(i, end = " ")
-  i+= 3 #step  increment i by 3
+    print(i, end = " ")
+    i+= 3 #step  increment i by 3
 # -10 -7 
 #++++++++++++++++++++++++++++++++++++++#
 #++++++++++++++++++++++++++++++++++++++#
 'From Negative to Positive by 1s'
 i = -3 #start
 while(i < 4): #stop (i <= 3)
-  print(i, end = " ")
-  i+=1 #step increment i by 1
+    print(i, end = " ")
+    i+=1 #step increment i by 1
 # -3 -2 -1 0 1 2 3 
 
 
 'From Negative to Positive by Multiples'
 i = -3 #start
 while(i < 4): #stop (i <= 3)
-  print(i, end = " ")
-  i+= 2 #step increment i by 2
+    print(i, end = " ")
+    i+= 2 #step increment i by 2
 # -3 -1 1 3
 #++++++++++++++++++++++++++++++++++++++#  
 
@@ -235,15 +234,15 @@ while(i < 4): #stop (i <= 3)
 'From Positive to 0 by 1s'
 i = 10 #start
 while(i > -1): #stop (i >= 0)
-  print(i, end = " ")
-  i -= 1 #step
+    print(i, end = " ")
+    i -= 1 #step
 # 10 9 8 7 6 5 4 3 2 1 0 
 
 'From Positive to 0 by Multiples'
 i = 10 #start
 while(i > -1): #stop (i >= 0)
-  print(i, end = " ")
-  i -= 3 #step
+    print(i, end = " ")
+    i -= 3 #step
 # 10 7 4 1 
   
 
@@ -251,15 +250,15 @@ while(i > -1): #stop (i >= 0)
 'From Positive to Positive by 1s'
 i = 50 #start
 while(i > 39): #stop (i >= 40)
-  print(i, end = " ")
-  i -= 1 #step
+    print(i, end = " ")
+    i -= 1 #step
 # 50 49 48 47 46 45 44 43 42 41 40 
 
 'From Positive to Positive by Multiples'
 i = 50 #start
 while(i > 39): #stop (i >= 40)
-  print(i, end = " ")
-  i -= 3 #step
+    print(i, end = " ")
+    i -= 3 #step
 # 50 47 44 41 
 
 
@@ -267,15 +266,15 @@ while(i > 39): #stop (i >= 40)
 'From Positive to Negative by 1s'
 i = 5 #start
 while(i > -2): #stop (i >= -1)
-  print(i, end = " ")
-  i -= 1#step
+    print(i, end = " ")
+    i -= 1#step
 # 5 4 3 2 1 0 -1 
 
 'From Positive to Negative by Multiples'
 i = 5 #start
 while(i > -2): #stop (i >= -1)
-  print(i, end = " ")
-  i -= 4 #step
+    print(i, end = " ")
+    i -= 4 #step
 # 5 1 
 
 
@@ -283,15 +282,15 @@ while(i > -2): #stop (i >= -1)
 'From 0 to Negative by 1s'
 i = 0 #start
 while(i > -7): #stop (i >= -6)
-  print(i, end = " ")
-  i -= 1#step
+    print(i, end = " ")
+    i -= 1#step
 # 0 -1 -2 -3 -4 -5 -6 
 
 'From 0 to Negative by Multiples'
 i = 0 #start
 while(i > -7): #stop (i >= -6)
-  print(i, end = " ")
-  i -= 3 #step
+    print(i, end = " ")
+    i -= 3 #step
 # 0 -3 -6 
 
 
@@ -299,15 +298,15 @@ while(i > -7): #stop (i >= -6)
 'From Negative to Negative by 1s'
 i = -6 #start
 while(i > -15): #stop (i >= -14)
-  print(i, end = " ")
-  i -= 1#step
+    print(i, end = " ")
+    i -= 1#step
 # -6 -7 -8 -9 -10 -11 -12 -13 -14 
 
 'From Negative to Negative by Multiples'
 i = -6 #start
 while(i > -15): #stop (i >= -14)
-  print(i, end = " ")
-  i -= 4#step
+    print(i, end = " ")
+    i -= 4#step
 # -6 -10 -14 
 
 #===============================================================================================================================#
@@ -322,16 +321,16 @@ while(i > -15): #stop (i >= -14)
 # examples
 condition = True
 while (condition):
-  print("This is an infinite loop!")
+    print("This is an infinite loop!")
 
 i = 0
 while (i < 10):
-  print("This is an infinite loop")
+    print("This is an infinite loop")
 
 i = 5
 while( i > 0):
-  print("This is an infinite loop")
-  i+=1
+    print("This is an infinite loop")
+    i+=1
 
 '''
   Off-by-One Errors
@@ -344,8 +343,8 @@ while( i > 0):
 #count from 0 to 5
 i = 0
 while (i < 5):
-  print(i, end = " ")
-  i+=1
+    print(i, end = " ")
+    i+=1
 #Off by 1, only counts from 0 to 4
 
 #===============================================================================================================================#
@@ -354,10 +353,10 @@ while (i < 5):
 #when the condition is no longer true run the else
 i = 1
 while(i <= 5):
-  print("Counting...", i)
-  i+=1
+    print("Counting...", i)
+    i+=1
 else: #when i becomes 6 this block runs
-  print("Finished Counting")
+    print("Finished Counting")
 
 #===============================================================================================================================#
 '> Nested While Loops'
@@ -369,26 +368,26 @@ inner_start = 0; inner_stop = 0; inner_step = 0
 
 
 repeat = outer_start
-while(repeat < outer_stop):#Outer Loop--------#
-                                              #
-  count = inner_start                         #
-  while(count < inner_stop):#Inner loop#      #
-    print(count, end = " ")            #      #
-    count += inner_step                #      #
-  #------------------------------------#      #
-  repeat += outer_step                        #
-#---------------------------------------------#
+while(repeat < outer_stop):#Outer Loop------------#
+                                                  #
+    count = inner_start                           #
+    while(count < inner_stop):#Inner loop--#      #
+        print(count, end = " ")            #      #
+        count += inner_step                #      #
+    #--------------------------------------#      #
+    repeat += outer_step                          #
+#-------------------------------------------------#
 
 #Example count to 5, 3 times
 repeat = 0
 while(repeat < 3):
 
-  count = 0
-  while(count < 6):
-    print(repeat, count)
-    count += 1
-  
-  repeat += 1
+    count = 0
+    while(count < 6):
+        print(repeat, count)
+        count += 1
+    
+    repeat += 1
 
 
 
@@ -402,7 +401,7 @@ while(repeat < 3):
   It is commonly used within loops like for and while to interrupt the loop's execution based on a certain condition.
 '''
 while(True):
-  break
+    break
 #the loop will exit on the first loop
 
 '''
@@ -413,10 +412,10 @@ while(True):
 '''
 i = 0
 while(i < 5):
-  if(i == 2):
+    if(i == 2):
+        i+=1
+        continue
+    print(i)
     i+=1
-    continue
-  print(i)
-  i+=1
 #skips the number 2
   
