@@ -18,6 +18,22 @@ Covered in this file:
 > First Program: User Input
 > Executing Python Programs
 '''
+'''
+Vocabulary:
+    > Comments
+    > docstring
+    > String
+    > Function Call
+    > Console
+    > Command Prompt
+    > Python Shell
+    > Command Line Interface (CLI)
+    > Program
+    > Scource Code
+    > Byte code
+    > Compile
+    > Interpreter
+'''
 #===============================================================================================================================#
 '> Single/Multi Line Comments'
 
@@ -64,7 +80,7 @@ print(input("Type your input: "))
 '''
 Congrats you have written your first python program!
 
-  Scource code like this is compiled into byte code by the python interpretor(python.exe on windows|python3 on linux/MacOS).
+  Scource code like this is compiled into byte code by the python interpreter (python.exe on windows|python3 on linux/MacOS).
     Then the python virtual machine PVM executes the bytecode instructions one by one.
 
 

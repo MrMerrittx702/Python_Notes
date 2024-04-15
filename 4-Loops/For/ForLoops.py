@@ -17,9 +17,16 @@ Covered in this file:
 > Break, Continue, and Pass
 '''
 
-#iterate: repitition of a process or function
-#condition: statement that evaluates True/False to determine if a code block is run.
-#Syntax: rules for writing a language
+'''
+Vocabulary:
+    >Iteration
+    > Iterable
+    > Iterator
+    > Condition
+    > Syntax
+
+'''
+
 #===============================================================================================================================#
 '> Iteration Defined'
 '''
@@ -28,6 +35,40 @@ Covered in this file:
 
   Iteration can be thought of as looping or repeating
 '''
+
+#instead of this:
+print(1)
+print(2)
+print(3)
+print(4)
+print(5)
+print(6)
+print(7)
+print(8)
+print(9)
+print(10)
+
+#Try these:
+
+#While Loops (Iteration)
+num = 1
+while (num <= 10):
+    print(num)
+    num += 1
+
+#For Loops (Iteration)
+for num in range(1,11,1):
+    print(num)
+
+#Functions (Recursion)
+def count(num, stop, step = 1): #Function Definition
+    if num <= stop:
+        print(num)
+        num += 1
+        count(num,stop,step)
+    return
+
+count(1,10) #Function Call
 
 #===============================================================================================================================#
 '> Python Indentation and Code Blocks'
@@ -41,49 +82,55 @@ Covered in this file:
 condition = True or False
 
 if(condition):
-    #start of the if code block
+    #start of the if code block (scope/context)
     print("Inside the if statement")
 
-#end of the if code block
+#end of the if code block (scope/context)
+
 while(condition):
-    #start of the while code block
+    #start of the while code block (scope/context)
     print("Inside the while loop")
 
-#end of the while code block
+#end of the while code block (scope/context)
+
 for _ in range(10):
-    #start of the for code block
+    #start of the for code block (scope/context)
     print("Inside the for loop")
 
-#end of the for code block
+#end of the for code block (scope/context)
+
 def function_():
-    #start of the function code block
+    #start of the function code block (scope/context)
     print("Inside of the function definition")
 
-#end of the function code block
+#end of the function code block (scope/context)
   
 #Nested Indentation# Blocks inside of blocks
 def example_():
-    #start of function code block--------------------------#
+    #start of function code block###########################
     for _ in range(5):                                     #
-        #start of for code block----------------------#    #
+        #start of for code block++++++++++++++++++++++#    #
         while(condition):                             #    #
-            #start of while code block -----------#   #    #      
+            #start of while code block============#   #    #      
             if(condition):                        #   #    #
                 #Start of if code block ------#   #   #    #
                 print("So many indents!")     #   #   #    #
             #end of if code block-------------#   #   #    #
-        #end of while code block------------------#   #    #
-    #end of for code block----------------------------#    #
-#end of function code block--------------------------------#
+        #end of while code block==================#   #    #
+    #end of for code block++++++++++++++++++++++++++++#    #
+#end of function code block#################################
+
 
 '''
 Note:
-  Indentation is typically achieved using spaces or tabs. 
-  Don't mix spaces and tabs, it can lead to syntax errors or inconsistent behavior. 
-  Python 3 disallows mixing tabs and spaces for indentation in the same source file.
+Indentation is typically achieved using spaces or tabs. 
+Don't mix spaces and tabs, it can lead to syntax errors or inconsistent behavior. 
+Python 3 disallows mixing tabs and spaces for indentation in the same source file.
 
-  If you are using an editor like VS code using the tab key, and spaces is not a problem. 
+If you are using an editor like VS code using the tab key, and spaces is not a problem. 
 '''
+
+
 #===============================================================================================================================#
 '> For Loop Syntax'
 

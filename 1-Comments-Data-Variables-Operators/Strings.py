@@ -15,6 +15,40 @@ Covered in this file:
 > Built-in String Function Calls
 > Built-in String Method Calls
 '''
+'''
+Vocabulary
+    > Character
+    > ASCII
+    > Unicode
+    > Control Code
+    > Decimal 
+    > Hexadecimal
+    > Binary
+    > Octal
+    > Escaping
+    > Sequence
+    > Lexicographical
+    > Indexing
+    > Slicing
+    > Substring
+    > Function
+    > Function Call
+    > Class
+    > Object
+    > Method
+    > Method Call
+    > Parameters
+    > Positional Parameters
+    > Keyword Parameters
+    > Arguments
+    > Positional Arguments
+    > Keyword Arguments
+    > Truncation
+
+
+'''
+
+
 #===============================================================================================================================#
 '> Characters Defined'
 #basic unit of information that represents a letter, number, symbol, or control code
@@ -228,7 +262,57 @@ print("abc\bd")
 print("Page 1\fPage 2")
 #            ^
 
+#===============================================================================================================================#
+'> Converting Characters'
+'   > characters can be represented in multiple ways.'
+'   > these are called encodings'
+'   > there are builtin function calls to convert between these encodings'
+'   > int(), bin(), hex(), oct(), str(),chr(), ord()'
 
+'> Convert to integer: int()'
+#int() converts to an integer. 
+int(2.17)       # 2  float to int
+int("97")       # 97 str to int
+int(0b1100001)  # 97 binary to int
+int("1100001",2)# 97 binary to int
+int(0x61)       # 97 hexadecimal to int
+int("61",16)    # 97 hexadecimal to int
+
+'> Convert to binary: bin()'
+# bin() coverts to binary
+# 0b is used to indicate binary values
+bin(97)     #0b1100001  decimal to binary
+bin(0x61)   #0b1100001 hex to binary
+
+#From character to binary
+bin("a") #TypeError: 'str' object cannot be interpreted as an integer
+bin(ord("a")) #returns binary: 0b1100001 
+#use the ord(str) call to convert to decimal first
+
+'> Convert to hexadecimal: hex()'
+# hex() coverts to hexadecimal
+#0x is used to indicate hex values
+hex(97)         # 0x61 decimal to hex
+hex(0b1100001)  # x61 binary to hex
+
+#From character to hex
+hex("a") #TypeError: 'str' object cannot be interpreted as an integer
+hex(ord("a")) #0x61
+#use the ord(str) call to convert to decimal first
+
+'> Covert to String'
+#str() converts to a string
+str(97) #returns string: 97
+
+'> Convert to Character: chr()'
+#chr() converts to a character
+chr(97)         #"a" decimal to character
+chr(0b1100001)  #"a" binary to character
+chr(0x61)       #"a" hex to character
+
+'> Convert to Ordinal: ord()'
+#ord() coverts a character to its decimal representation
+ord("a") #returns decimal: 97
 #===============================================================================================================================#
 '> Strings Defined'
 '>> Strings are immutable (cannot be changed) sequences of characters.'

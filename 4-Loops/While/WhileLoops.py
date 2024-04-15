@@ -15,9 +15,28 @@ Covered in this file:
 > Nested While Loops
 > Break, Continue, and Pass
 '''
-#iterate: repitition of a process or function
-#condition: statement that evaluates True/False to determine if a code block is run.
-#Syntax: rules for writing a language
+
+'''
+Vocabulary:
+    > Iterate
+    > Condition
+    > Coditional
+    > Syntax
+    > While Loop
+    > For Loop
+    > Control Variable
+    > return
+    > Recursion
+    > Function Definition
+    > Function Call
+    > Scope/Context
+    > Local Scope
+    > Global Scope
+    > Break
+    > Continue
+    > Pass
+'''
+
 #===============================================================================================================================#
 '> Iteration Defined'
 '''
@@ -26,6 +45,40 @@ Covered in this file:
 
   Iteration can be thought of as looping or repeating
 '''
+
+#instead of this:
+print(1)
+print(2)
+print(3)
+print(4)
+print(5)
+print(6)
+print(7)
+print(8)
+print(9)
+print(10)
+
+#Try these:
+
+#While Loops (Iteration)
+num = 1
+while (num <= 10):
+    print(num)
+    num += 1
+
+#For Loops (Iteration)
+for num in range(1,11,1):
+    print(num)
+
+#Functions (Recursion)
+def count(num, stop, step = 1): #Function Definition
+    if num <= stop:
+        print(num)
+        num += 1
+        count(num,stop,step)
+    return
+
+count(1,10) #Function Call
 
 #===============================================================================================================================#
 '> Python Indentation and Code Blocks'
@@ -39,58 +92,67 @@ Covered in this file:
 condition = True or False
 
 if(condition):
-    #start of the if code block
+    #start of the if code block (scope/context)
     print("Inside the if statement")
 
-#end of the if code block
+#end of the if code block (scope/context)
+
 while(condition):
-    #start of the while code block
+    #start of the while code block (scope/context)
     print("Inside the while loop")
 
-#end of the while code block
+#end of the while code block (scope/context)
+
 for _ in range(10):
-    #start of the for code block
+    #start of the for code block (scope/context)
     print("Inside the for loop")
 
-#end of the for code block
+#end of the for code block (scope/context)
+
 def function_():
-    #start of the function code block
+    #start of the function code block (scope/context)
     print("Inside of the function definition")
 
-#end of the function code block
+#end of the function code block (scope/context)
   
 #Nested Indentation# Blocks inside of blocks
 def example_():
-    #start of function code block--------------------------#
+    #start of function code block###########################
     for _ in range(5):                                     #
-        #start of for code block----------------------#    #
+        #start of for code block++++++++++++++++++++++#    #
         while(condition):                             #    #
-            #start of while code block -----------#   #    #      
+            #start of while code block============#   #    #      
             if(condition):                        #   #    #
                 #Start of if code block ------#   #   #    #
                 print("So many indents!")     #   #   #    #
             #end of if code block-------------#   #   #    #
-        #end of while code block------------------#   #    #
-    #end of for code block----------------------------#    #
-#end of function code block--------------------------------#
+        #end of while code block==================#   #    #
+    #end of for code block++++++++++++++++++++++++++++#    #
+#end of function code block#################################
+
 
 '''
 Note:
-  Indentation is typically achieved using spaces or tabs. 
-  Don't mix spaces and tabs, it can lead to syntax errors or inconsistent behavior. 
-  Python 3 disallows mixing tabs and spaces for indentation in the same source file.
+Indentation is typically achieved using spaces or tabs. 
+Don't mix spaces and tabs, it can lead to syntax errors or inconsistent behavior. 
+Python 3 disallows mixing tabs and spaces for indentation in the same source file.
 
-  If you are using an editor like VS code using the tab key, and spaces is not a problem. 
+If you are using an editor like VS code using the tab key, and spaces is not a problem. 
 '''
+
+
 #===============================================================================================================================#
 '> While Loop Syntax'
+'   > use a condition to determine when to stop looping. '
+'   > typically used when the number of iterations is not fixed.'
+
 condition = True or False
 
 
 while(condition):
-    #indent 4 spaces to be inside of the loop block
+    #indent 4 spaces to be inside of the loop block (scope/context)
     'repeat this code block'
-#unindent 4 spaces to exit the loop block
+#unindent 4 spaces to exit the loop block (scope/context)
 
 #------------------------------------#
 while(condition): #-------------#    #
@@ -101,8 +163,8 @@ while(condition): #-------------#    #
 
 #===============================================================================================================================#
 '> The control variable'
-#while loops will often end up in an infinite loop
-#to fix this error while loops usually have a control variable
+'   > while loops will often result in an infinite loop'
+'   > a control variable is used to control the number of loops'
 
 count = 0 #this is the control variable
 
@@ -116,6 +178,7 @@ while count < 5: #stops the loop when count is >= 5
 
 #===============================================================================================================================#
 '> Counting with while loops'
+'   > use a control variable, and define the start, stop, and step of the loop.'
 
 start = 0 #start: where to start counting
 stop = 5 #stop: where to stop counting
@@ -316,7 +379,6 @@ while(i > -15): #stop (i >= -14)
   Infinite Loops
   An infinite loop is a loop that continues executing 
     indefinitely because its exit condition is never met. 
-
 '''
 # examples
 condition = True
@@ -349,6 +411,7 @@ while (i < 5):
 
 #===============================================================================================================================#
 '> Special to Python: While-Else'
+'   > the else block runs on time, once the condition is false'
 
 #when the condition is no longer true run the else
 i = 1
@@ -360,6 +423,8 @@ else: #when i becomes 6 this block runs
 
 #===============================================================================================================================#
 '> Nested While Loops'
+'   > one while loop placed inside of another.'
+'   > the inner loop executes completely for every 1 iteration of the outer loop.'
 
 #Placing one While Loop into another While Loop
 

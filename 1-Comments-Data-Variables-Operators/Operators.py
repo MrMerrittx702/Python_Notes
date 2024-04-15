@@ -17,6 +17,25 @@ Covered in this file:
 > Bitwise Operators
 > Complete Operator Precedence
 '''
+'''
+Vocabulary
+    > Concatenation
+    > Duplication
+    > Cast
+    > Function Call
+    > Arguments
+    > Positional Arguments
+    > Keyword Arguments
+    > Class
+    > Operator
+    > Membership
+    > Identity
+    > Increment
+    > Decrement
+    > Iterable
+    > Binary
+    > Bit
+'''
 
 #===============================================================================================================================#
 '> Concatenation (combining strings)'
@@ -44,13 +63,13 @@ print(duplicated) #aaa
 
 #===============================================================================================================================#
 '> Casting'
-' > converting the type of data.'
+'   > converting the type of data.'
 
 'Function calls for casting.'
-type() #returns the data type
-str()  #convert to string
-int()  #Converts a number or string to an integer.
-float()#Converts a number or string to a floating-point number.
+type()  #returns the data type
+str()   #convert to string
+int()   #Converts a number or string to an integer.
+float() #Converts a number or string to a floating-point number.
 
 #example
 a = 5
@@ -172,6 +191,16 @@ a == 1 # checks if a is equal to the value 1
 %=   #modulo (remainder) and assign
 **=  #exponentiation (power) and assign
 '''
+'''
+Often it is necessary to change the value of a variable
+  by taking its current value performing and operation
+  then setting the variable to the new value
+'''
+#Example
+num = 0
+num = num + 1
+# This can become tedious when done often
+# There is a shorthand way to perform this type of operation.
 
 x = 1
 
@@ -183,6 +212,22 @@ x = x / 1;  'is the same as';  x/=1
 x = x // 1; 'is the same as';  x//=1
 x = x % 1;  'is the same as';  x%=1
 x = x ** 1; 'is the same as';  x**=1
+
+'> Incrementing a value'
+'increasing the value of a variable by 1 or more'
+number = 0
+number += 1
+number += 1
+print(number) # 2
+
+'> Decrementing a value'
+'decreasing the value of a variable by 1 or more'
+number = 10
+number -= 1
+number -= 1
+number -= 1
+print(number) # 7
+
  
 #===============================================================================================================================#
 '> Logical Operators' 
@@ -305,8 +350,8 @@ any([True, True, False]) #True
 
 #===============================================================================================================================#
 '''Bitwise Operations'''
-#Bitwise operations work on individual bits within data.
-#Order of operations for Bitwise Operators is Not, Shifts, And, Xor, Or (NSAXO)
+# Bitwise operations work on individual bits within data.
+# Order of operations for Bitwise Operators is Not, Shifts, And, Xor, Or (NSAXO)
 
 '''
   Bitwise NOT (~) #opposite

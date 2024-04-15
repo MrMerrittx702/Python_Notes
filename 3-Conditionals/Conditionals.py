@@ -17,6 +17,25 @@
   > Ternary Operators: Shorthand Conditionals`
   > Match Statements
 '''
+
+'''
+Vocabulary:
+    > Iteration
+    > Condition
+    > Conditional
+    > Expression
+    > Boolean Expression
+    > Arithmetic
+    > Relational 
+    > Logical
+    > Bitwise
+    > Truth Table
+    > Scope/Context
+    > Nesting
+    > Ternary Operator
+    > Match
+
+'''
 #===============================================================================================================================#
 '> Review: Booleans, Relational Operators, and  Logical Operators'
 
@@ -39,14 +58,14 @@ False
 != #not equal to
 
 #Special to python
-is # identical to
-is not # not identical to
-in # apart of
-not in # not apart of
+is      # identical to
+is not  # not identical to
+in      # apart of
+not in  # not apart of
 
 #Logical Operators (for multiple conditions)
 #Order of Operations NAO
-not  # opposite: ~T --> F // ~F --> T
+not  # opposite: not T --> F // not F --> T
 and  #both : T and T --> T //all others are F
 or   # at least 1: F or F --> F // all others are T
 '''
@@ -86,44 +105,48 @@ print(x == y) #False
   All statements within the same block must have the same level of indentation. 
   The end of a block is indicated by the decrease in indentation level. 
 '''
+
 #examples
 condition = True or False
 
 if(condition):
-    #start of the if code block
+    #start of the if code block (scope/context)
     print("Inside the if statement")
 
-#end of the if code block
+#end of the if code block (scope/context)
+
 while(condition):
-    #start of the while code block
+    #start of the while code block (scope/context)
     print("Inside the while loop")
 
-#end of the while code block
+#end of the while code block (scope/context)
+
 for _ in range(10):
-    #start of the for code block
+    #start of the for code block (scope/context)
     print("Inside the for loop")
 
-#end of the for code block
+#end of the for code block (scope/context)
+
 def function_():
-    #start of the function code block
+    #start of the function code block (scope/context)
     print("Inside of the function definition")
 
-#end of the function code block
+#end of the function code block (scope/context)
   
 #Nested Indentation# Blocks inside of blocks
 def example_():
-    #start of function code block--------------------------#
+    #start of function code block###########################
     for _ in range(5):                                     #
-        #start of for code block----------------------#    #
+        #start of for code block++++++++++++++++++++++#    #
         while(condition):                             #    #
-            #start of while code block -----------#   #    #      
+            #start of while code block============#   #    #      
             if(condition):                        #   #    #
                 #Start of if code block ------#   #   #    #
                 print("So many indents!")     #   #   #    #
             #end of if code block-------------#   #   #    #
-        #end of while code block------------------#   #    #
-    #end of for code block----------------------------#    #
-#end of function code block--------------------------------#
+        #end of while code block==================#   #    #
+    #end of for code block++++++++++++++++++++++++++++#    #
+#end of function code block#################################
 
 
 '''
@@ -166,11 +189,23 @@ if(False): #----------#
 
 '''
   Special Notes for Conditionals:
-    When writing if statments you will often get output, sometimes even correct output, but you code does not work as intended in every case. 
-    Any non-zero number (integer, float) is evaluated as True
-    Any non-empty string, list, tuple, set, or dictionary,  is evaluated as True
-    Any function, method, lambda or class is evaluated as True
-    By default objects are evaluated True, but how an object is evaluated can be changed.
+    > When writing if statments you will often get output, 
+        sometimes even correct output, but your code does not work 
+        as intended in every case. 
+
+    Integers/Floats   
+        > Any non-zero number (integer, float) is evaluated as True
+    
+    Strings,Lists, Tuples, Sets, Dictionaries
+        > Any non-empty string, list, tuple, set, or dictionary,  
+          is evaluated as True
+    
+    Functions, Methods, Lambdas, Classes
+        > Any function, method, lambda or class is evaluated as True
+    
+    Objects
+        > By default objects are evaluated True, 
+          but how an object is evaluated can be changed.
 '''
 
 #===============================================================================================================================#

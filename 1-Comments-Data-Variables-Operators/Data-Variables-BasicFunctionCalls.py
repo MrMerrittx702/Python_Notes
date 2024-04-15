@@ -3,15 +3,42 @@
 #===============================================================================================================================#
 '''
 Covered in this file:
-  > General Syntax
-  > Data Types
-  > Literals (actual values)
-  > Variables (containers that store values)
-  > Type Annotations: Declaring Variable Type
-  > Aliases (reference the same data)
-  > Print Function Call
-  > Input Function Call
-  > Nesting (put one thing inside of another)
+    > General Syntax
+    > Data Types
+    > Literals (data)
+    > Variables (pointers to data)
+    > Type Annotations: Declaring Variable Type
+    > Aliases (point to the same location)
+    > Print Function Call
+    > Input Function Call
+    > Nesting (put one thing inside of another)
+'''
+'''
+Vocabulary
+    > Syntax
+    > Scope/Context
+    > Nesting
+    > Function
+    > Function Call
+    > Class
+    > Method
+    > Argument
+    > Literal
+    > Mutable
+    > Immutable
+    > Variable
+    > Memory
+    > Collection
+    > Member
+    > Null
+    > Reference
+    > Alias
+    > Annotation
+    > Interpreter
+    > Parameter
+    > Cursor
+    > Standard Output
+    > Standard Input
 '''
 #===============================================================================================================================#
 '> General Syntax'
@@ -137,10 +164,22 @@ True          # boolean(True or False)
   Immutable " you cannot change the data it holds" 
       (numbers, booleans, strings, tuples)
 '''
-#The type() function can be used to check the type of data
+
+
+#The type() function returns the type of data passed to it.
 type()
-type(5) # <class 'int'>
-type("text") # <class 'str'>
+
+type(None)                   #<class 'NoneType'>
+type(True)                   # <class 'bool'>
+type(5)                      # <class 'int'>
+type(3.14)                   # <class 'float'>
+type(1j)                     # <class 'complex'>
+type("a")                    # <class 'str'>
+type("Hello")                # <class 'str'>
+type(["a","b","c"])          # <class 'list'>
+type(("a","b","c"))          # <class 'tuple'>
+type({"a","b","c"})          # <class 'set'>
+type({"a":97,"b":98,"c":99}) # <class 'dict'>
 
 
 
@@ -177,7 +216,9 @@ True              # boolean literal
 
 
 #===============================================================================================================================#
-'> Variables are containers that store data values'
+'> Variables'
+'   > act like containers that store data values.'
+'   > however, variables are pointers that reference a location in memory where a data value is stored.'
 
 # use a single equals sign (=) to assign a value to a variable.
 # the equal sign must always be on the left side of the operation
@@ -186,6 +227,7 @@ True              # boolean literal
 container = "Hello World"
 
 #assigning variables
+# assigning a variables defines where the variable points to in memory.
 a = "Hello World"
 b = 5
 c = 3.14
@@ -196,7 +238,8 @@ f = 2; g = 3; h = 4 #assign on the same line with ";"
 #or
 i , j , k = 5, 6, 7 
 
-#change a variables value (reassigning)
+# change a variables value (reassigning)
+# reassigning a variable changes where it points to in memory.
 a = 0
 a = 1
 a = 2
@@ -210,7 +253,7 @@ print(a)
     > Cannot start with a number
     > Can only contain a-z, A-Z, 0-9, and "_" characters
     > Cannot contain spaces
-    > Variables should be named after what they store/represent
+    > Variables should be named after what they store/reference
 '''
 
 #Legal Variable Names
@@ -230,48 +273,78 @@ v ar = 0
 @#$%@ = 0
 '''
 
+'   > Variables are pointers to locations in memory.'
+#Use the id() function call to return the memory location to which variable points.
+# Returns a <class 'int'> that is a unique identifier for a location in memory where the data is stored.
+# The number will potentially be different each time the program is executed. 
+memory_pointer = "Hello World"
+id(memory_pointer) # 139029363861936
+
+memory_pointer = 10
+id(memory_pointer) # 139029373780496
 
 #===============================================================================================================================#
 '> Aliases'
-' > assigning one variable to store another variable is called aliasing.'
-' > the variables pass a reference to the data they store.'
+'   > assigning one variable to store another variable is called aliasing.'
+'   > the variables pass a reference to the data they store.'
 a = "some text"
 
 #a, b, and c are aliases (ie they point to the same data)
 b = a 
 c = b
-print(b) # some text
-print(c) # some text
+print(a)     # some text
+print(b)     # some text
+print(c)     # some text
+print(id(a)) # 125810368587504 <-- Same Memory Location
+print(id(b)) # 125810368587504 <-- Same Memory Location
+print(id(c)) # 125810368587504 <-- Same Memory Location
 
-# a points to a new value
+
+# Pointing the variable 'a' to a new value
 a = "a was changed"
-print(b) # some text
-print(c) # some text
+print(a)     # a was changed
+print(b)     # some text
+print(c)     # some text
+print(id(a)) # 125810368883120 <-- New Memory Location
+print(id(b)) # 125810368587504 <-- Same Memory Location
+print(id(c)) # 125810368587504 <-- Same Memory Location
 
-# b points to a new value
+# Pointing the variable 'b' to a new value
 b = "b was changed"
-print(a) # a was changed
-print(c) # some text
-
-# c points to a new value
+print(a)     # a was changed
+print(b)     # b was changed
+print(c)     # some text
+print(id(a)) # 125810368883120
+print(id(b)) # 125810368882544 <-- New Memory location
+print(id(c)) # 125810368587504 
+ 
+# Pointing the variable 'c' to a new value.
 c = "c was changed"
-print(a) # a was changed
-print(b) # b was changed
+print(a)     # a was changed
+print(b)     # b was changed
+print(c)     # c was changed
+print(id(a)) # 125810368883120 <-- Different Memory Location
+print(id(b)) # 125810368882544 <-- Different Memory Location 
+print(id(c)) # 125810368880496 <-- Different Memory Location
 
-#if a,b, and c point to a mutable data type 
-# a change in the data is reflected in all variables. 
+
+# If variables point to the same mutable data type: 
+# a change in the data is reflected in all the variables. 
 a = [1,2,3]
 b = a
 c = b
 c[0] = 999
-print(a) # [999, 2, 3]
-print(b) # [999, 2, 3]
-print(c) # [999, 2, 3]
+print(a)     # [999, 2, 3]
+print(b)     # [999, 2, 3]
+print(c)     # [999, 2, 3]
+print(id(a)) # 125810368584576 <-- Same Memory Location 
+print(id(b)) # 125810368584576 <-- Same Memory Location
+print(id(c)) # 125810368584576 <-- Same Memory Location
 
 #===============================================================================================================================#
 '> Type Annotations: Declaring Variable type'
 
-' > Type Annotation is a way to declare the type of data the variable is expected to store, but is not enforced by the interpretor'
+' > Type Annotation is a way to declare the type of data the variable is expected to store, but is not enforced by the interpreter'
 #variable_name: type = literal
 boolean: bool = True
 num: int = 10

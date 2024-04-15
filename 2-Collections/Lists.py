@@ -19,6 +19,26 @@
   > Looping through lists
 '''
 
+'''
+Vocabulary:
+    > List
+    > Mutable
+    > Index
+    > Element
+    > Iterable
+    > Iterator
+    > Constructor
+    > Membership
+    > Concatenation
+    > Duplication
+    > Return
+    > Slicing
+    > Ascending
+    > Descending
+    > Comprehension
+    > Unpacking
+'''
+
 #===============================================================================================================================#
 '> Defining a list'
 
@@ -39,10 +59,13 @@
 '''
 There are four collection data types in the Python programming language:
 
-List is a collection which is ordered and mutable. Allows duplicate members.
-Tuple is a collection which is ordered and immutable. Allows duplicate members.
-Set is a collection which is unordered, unchangeable*, and unindexed. No duplicate members.
-Dictionary is a collection which is ordered** and changeable. No duplicate members.
+> List: collection which is ordered and mutable. Allows duplicate members.
+
+> Tuple: collection which is ordered and immutable. Allows duplicate members.
+
+> Set: collection which is unordered, unchangeable*, and unindexed. No duplicate members.
+
+> Dictionary: collection which is ordered** and changeable. No duplicate members.
 '''
 
 #===============================================================================================================================#
@@ -173,7 +196,7 @@ list1d = ["z","b","o","d","e","y","g","n","i","j","x","m"]
 #===============================================================================================================================#
 '> Built-in list function calls'
 '''
-Functions are blocks of reusable code
+Functions are blocks of reusable code, the perform a task
   Functions are typically called using their name followed by parentheses 
     and any required arguments inside
   
@@ -218,7 +241,7 @@ zip(list1, list2)
     Methods are typically called using an object or class and dot (.) syntax
       object.method(parameters) --> for methods which require objects
         or
-      class.method(paramters) --> for methods which do not require objects
+      class.method(parameters) --> for methods which do not require objects
 '''
 
 #To see what methods you can call on an object use dir(object)
@@ -347,7 +370,7 @@ len(list2d[row])-1 # 5 last column index
  from a container (such as a list, tuple, dictionary)
 '''
 # Unpacking with Asterisk (*)
-#Unpacking into variables
+# Unpacking into variables
 list1d = [1,2,3]
 a, b, c = list1d
 #a = 1
