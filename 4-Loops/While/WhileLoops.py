@@ -16,27 +16,6 @@ Covered in this file:
 > Break, Continue, and Pass
 '''
 
-'''
-Vocabulary:
-    > Iterate
-    > Condition
-    > Coditional
-    > Syntax
-    > While Loop
-    > For Loop
-    > Control Variable
-    > return
-    > Recursion
-    > Function Definition
-    > Function Call
-    > Scope/Context
-    > Local Scope
-    > Global Scope
-    > Break
-    > Continue
-    > Pass
-'''
-
 #===============================================================================================================================#
 '> Iteration Defined'
 '''
@@ -483,4 +462,98 @@ while(i < 5):
     print(i)
     i+=1
 #skips the number 2
+
+#===============================================================================================================================#
+
+'''
+Vocabulary:
+
+Break
+Conditional
+Condition
+Continue
+Control Variable
+For Loop
+Function Call
+Function Definition
+Global Scope
+Iterate
+Local Scope
+Pass
+Recursion
+Return
+Scope/Context
+Syntax
+While Loop
+
+Break:
+Break is a keyword used in loop constructs to terminate the loop prematurely. 
+When a break statement is encountered within a loop, the loop is exited immediately, and control is transferred to the statement following the loop.
+
+Conditional:
+Conditional refers to statements or constructs in programming that execute different blocks of code based on specified conditions. 
+They allow for decision-making and control flow based on whether certain conditions are true or false.
+
+Condition:
+A condition is a statement or expression that evaluates to a boolean value (true or false). 
+It is often used to determine the flow of execution in a program, controlling the execution of certain blocks of code based on whether the condition is true or false.
+
+Continue:
+Continue is a keyword used in loop constructs to skip the remaining code within the current iteration of the loop and proceed to the next iteration. 
+When a continue statement is encountered, the loop advances to the next iteration without executing the remaining code in the loop body.
+
+Control Variable:
+A control variable is a variable used to control the behavior of a loop. 
+It typically represents the iteration count or state of the loop and is updated during each iteration to determine when the loop should terminate.
+
+For Loop:
+A for loop is a control flow statement used to repeatedly execute a block of code a fixed number of times or over a sequence of elements. 
+It iterates over a sequence, such as a range of numbers or elements in a collection, and executes the loop body for each iteration.
+
+Function Call:
+A function call is an instruction that invokes a specific function with provided arguments. 
+It triggers the execution of the function's code, and upon completion, the function may return a result or perform other actions as defined.
+
+Function Definition:
+A function definition is the implementation of a function, including its name, parameters, and code block. 
+It specifies the behavior of the function and defines how it operates when called with specific arguments.
+
+Global Scope:
+Global scope refers to the visibility and accessibility of variables, functions, and other identifiers throughout the entire program. 
+Variables declared in the global scope can be accessed and modified from any part of the program.
+
+Iterate:
+Iteration is the process of repeatedly executing a set of instructions or operations, typically over a sequence of elements or until a certain condition is met. 
+It involves looping constructs like for loops, while loops, or iterators.
+
+Local Scope:
+Local scope refers to the visibility and accessibility of variables, functions, and other identifiers within a specific portion of code, such as a function or block. 
+Variables declared in local scope are only accessible within that scope and cannot be accessed from outside.
+
+Pass:
+Pass is a keyword used in Python to create a placeholder or empty block of code. 
+It serves as a syntactic requirement where code is expected but no action is needed, allowing the program to pass over the block without causing errors.
+
+Recursion:
+Recursion is a programming technique where a function calls itself directly or indirectly to solve a problem. 
+It involves breaking down a problem into smaller subproblems and solving each subproblem recursively until a base case is reached.
+
+Return:
+Return is a keyword used in functions to specify the value that the function should produce or output when called. 
+It allows functions to send back results or data to the caller for further use or processing.
+
+Scope/Context:
+Scope or context refers to the visibility and accessibility of variables, functions, and other identifiers within a program. 
+It defines where variables and functions can be accessed and modified, determining their lifetime and visibility.
+
+Syntax:
+Syntax refers to the rules and structure governing the arrangement of elements in a programming language. 
+It defines the correct grammar and punctuation required for valid code, ensuring that programs can be interpreted or compiled correctly.
+
+While Loop:
+A while loop is a control flow statement used to repeatedly execute a block of code as long as a specified condition is true. 
+It iterates over the code block until the condition evaluates to false, allowing for flexible looping based on dynamic conditions.
+
+    
+'''
   

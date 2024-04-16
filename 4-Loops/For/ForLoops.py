@@ -17,16 +17,6 @@ Covered in this file:
 > Break, Continue, and Pass
 '''
 
-'''
-Vocabulary:
-    >Iteration
-    > Iterable
-    > Iterator
-    > Condition
-    > Syntax
-
-'''
-
 #===============================================================================================================================#
 '> Iteration Defined'
 '''
@@ -471,6 +461,61 @@ for x in range(50):
     else:
         print(x)
 
+#===============================================================================================================================#
+
+'''
+Vocabulary:
+
+Break
+Condition
+Continue
+For Loop
+Iterable
+Iteration
+Iterator
+Nesting
+Syntax
+
+
+Break:
+Break is a control flow statement used in loop constructs to exit the loop prematurely. 
+When a break statement is encountered within a loop, the loop is immediately terminated, and the program execution continues with the statement following the loop.
+
+Condition:
+A condition is a statement or expression that evaluates to a boolean value (either true or false). 
+Conditions are used to control the flow of execution in a program, determining which blocks of code are executed based on whether the condition is true or false.
+
+Continue:
+Continue is a control flow statement used in loop constructs to skip the remaining code within the current iteration of the loop and move to the next iteration. 
+When a continue statement is encountered, the loop proceeds to the next iteration without executing the remaining code in the loop body.
+
+For Loop:
+A for loop is a control flow statement used to iterate over a sequence of elements or execute a block of code a fixed number of times. 
+It typically iterates over an iterable object, such as a list, tuple, or range, and executes the loop body for each element or iteration.
+
+Iterable:
+An iterable is an object that can be iterated over, allowing its elements to be accessed sequentially. 
+Examples of iterables include lists, tuples, sets, dictionaries, strings, and custom iterable objects. 
+Iterables can be used in for loops and other iterable operations.
+
+Iteration:
+Iteration is the process of repeatedly executing a set of instructions or operations, typically over a sequence of elements or until a certain condition is met. 
+It involves looping constructs like for loops, while loops, or iterators.
+
+Iterator:
+An iterator is an object used to traverse or iterate over the elements of an iterable object. 
+It maintains state information about the current position within the iterable and provides methods for accessing the next element. 
+Iterators are used internally by for loops and other iterable operations.
+
+Nesting:
+Nesting refers to the practice of placing one construct or block of code inside another. 
+It involves encapsulating code within other code blocks, such as loops inside loops or conditional statements inside other conditionals.
+
+Syntax:
+Syntax refers to the rules and structure governing the arrangement of elements in a programming language. 
+It defines the correct grammar and punctuation required for valid code, ensuring that programs can be interpreted or compiled correctly. Syntax includes keywords, operators, punctuation, and rules for constructing statements and expressions.
+
+'''
 
 
 

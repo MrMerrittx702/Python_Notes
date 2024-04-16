@@ -24,25 +24,6 @@ Covered in this file:
 > Function Examples Including Control Structures
 '''
 
-'''
-Vocabulary:
-    > Abstraction
-    > Sequential
-    > Function
-    > Function Definition
-    > Parameters
-    > Positional Parameters
-    > Keyword Parameters
-    > Return
-    > Function Call
-    > Arguments
-    > Positional Arguments
-    > Keyword Arguments
-    > Lambda
-    > Scope/Context
-    > Annotation
-'''
-
 #===============================================================================================================================#
 'Function Definition'
 '''
@@ -804,9 +785,85 @@ letters = ["a","b","c","d","e"]
 print(count_vowels(letters))
 
 
- 
+#===============================================================================================================================#
+'''
+Vocabulary:
 
+Abstraction
+Annotation
+Arguments
+Function
+Function Call
+Function Definition
+Keyword Arguments
+Keyword Parameters
+Lambda
+Parameters
+Positional Arguments
+Positional Parameters
+Return
+Scope/Context
+Sequential
 
+Abstraction:
+Abstraction is a concept in programming that involves hiding the complex implementation details of a system or module and presenting only the necessary features or functionalities to the user. 
+It allows users to interact with a system at a high level without needing to understand its internal workings.
+
+Annotation:
+Annotation is metadata or additional information associated with a program element like a variable, function, class, or method. 
+Annotations are typically used for documentation, type hints, or other context to aid in program understanding or analysis.
+
+Arguments:
+Arguments are values passed to a function or method when it is called. 
+They provide input or data for the function's operation, allowing the function to perform its task with specific values or parameters.
+
+Function:
+A function is a self-contained block of code designed to perform a specific task or operation. 
+It may accept input arguments, perform computations, and return results, enabling code modularity and reusability.
+
+Function Call:
+A function call is an instruction that invokes a specific function with provided arguments. 
+It triggers the execution of the function's code, and upon completion, the function may return a result or perform other actions as defined.
+
+Function Definition:
+A function definition is the implementation of a function, including its name, parameters, and code block. 
+It specifies the behavior of the function and defines how it operates when called with specific arguments.
+
+Keyword Arguments:
+Keyword arguments are arguments passed to a function or method by specifying the parameter name followed by the value. 
+They allow for more explicit and flexible function calls by associating values with specific parameter names.
+
+Keyword Parameters:
+Keyword parameters are parameters in a function definition that are specified with default values and can be passed by name in function calls. 
+They provide a way to define optional parameters with default values, enhancing the flexibility of function definitions.
+
+Lambda:
+A lambda function, also known as an anonymous function or lambda expression, is a small, inline function defined without a name. 
+It is typically used for short, simple operations and can be passed as an argument or used in contexts where a full function definition is not required.
+
+Parameters:
+Parameters are variables or placeholders in a function or method definition that are used to receive input when the function or method is called. 
+They define the interface of the function and specify the types and order of arguments it expects.
+
+Positional Arguments:
+Positional arguments are arguments passed to a function or method by position, where the order of arguments determines their association with the corresponding parameters in the function definition.
+
+Positional Parameters:
+Positional parameters are parameters in a function definition that are specified without default values and must be passed by position in function calls. 
+They represent required inputs to the function and are associated with arguments based on their order.
+
+Return:
+Return is a keyword used in functions to specify the value that the function should produce or output when called. 
+It allows functions to send back results or data to the caller for further use or processing.
+
+Scope/Context:
+Scope or context refers to the visibility and accessibility of variables, functions, and other identifiers within a program. 
+It defines where variables and functions can be accessed and modified, determining their lifetime and visibility.
+
+Sequential:
+Sequential refers to the execution of statements or operations in a specific order, one after the other, without parallelism or concurrency. 
+It describes the linear flow of control in a program, where each statement is executed in sequence.
+'''
 
 
 

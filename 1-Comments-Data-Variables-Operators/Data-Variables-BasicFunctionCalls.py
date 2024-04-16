@@ -13,33 +13,7 @@ Covered in this file:
     > Input Function Call
     > Nesting (put one thing inside of another)
 '''
-'''
-Vocabulary
-    > Syntax
-    > Scope/Context
-    > Nesting
-    > Function
-    > Function Call
-    > Class
-    > Method
-    > Argument
-    > Literal
-    > Mutable
-    > Immutable
-    > Variable
-    > Memory
-    > Collection
-    > Member
-    > Null
-    > Reference
-    > Alias
-    > Annotation
-    > Interpreter
-    > Parameter
-    > Cursor
-    > Standard Output
-    > Standard Input
-'''
+
 #===============================================================================================================================#
 '> General Syntax'
 
@@ -468,5 +442,129 @@ print(int(input("Type a number")))
 #The input function is inside of the int function which is inside of the print function.
 
 #===============================================================================================================================#
+'''
+Vocabulary:
 
+Alias
+Annotation
+Argument
+Class
+Collection
+Cursor
+Function
+Function Call
+Immutable
+Interpreter
+Literal
+Member
+Memory
+Method
+Mutable
+Nesting
+Null
+Parameter
+Reference
+Scope/Context
+Standard Input
+Standard Output
+Syntax
+Variable
+
+Alias:
+Alias is an alternative name or identifier that refers to the same entity as another name. 
+It's commonly used to provide alternative names for variables, functions, modules, or other program elements.
+
+Annotation:
+Annotation is metadata or additional information associated with a program element like a variable, function, class, or method. 
+Annotations are typically used for documentation, type hints, or other context to aid in program understanding or analysis.
+
+Argument:
+Argument is a value passed to a function or method when calling it. 
+It provides input or data for the function's operation, allowing the function to perform its task with specific values or parameters.
+
+Class:
+Class is a blueprint for creating objects in object-oriented programming (OOP). 
+It defines the properties (attributes) and behaviors (methods) that objects of the class will have. Classes provide a way to model real-world entities and organize code into reusable components.
+
+Collection:
+Collection refers to a grouping of related elements or items stored and manipulated together as a single unit. 
+It encompasses various data structures like lists, sets, dictionaries, arrays, and tuples.
+
+Cursor:
+Cursor is a pointer or indicator used to navigate through a data set or data structure, often seen in databases or file processing. 
+Cursors facilitate reading, updating, or manipulating data records sequentially or selectively.
+
+Function:
+Function is a self-contained block of code designed to perform a specific task or operation. 
+It may accept input arguments, perform computations, and return results, enabling code modularity and reusability.
+
+Function Call:
+Function Call is an instruction that invokes a specific function with provided arguments. 
+It triggers the execution of the function's code, and upon completion, the function may return a result or perform other actions as defined.
+
+Immutable:
+Immutable refers to an object or value that cannot be modified or altered after its creation. 
+Immutable objects maintain their state throughout their lifetime, promoting stability and preventing unintended changes.
+
+Interpreter:
+Interpreter is a program responsible for executing source code directly, typically line by line. 
+It interprets and translates code instructions into machine-understandable form at runtime, commonly used in scripting languages like Python.
+
+Literal:
+Literal is a notation representing a fixed value directly within source code. 
+It may denote constants like numeric values, strings, boolean literals, or other primitive data types in their explicit, recognizable form.
+
+Member:
+Member refers to an element or part belonging to a group, class, or collection. 
+In programming, it commonly signifies variables, functions, or other entities associated with a class, module, or data structure.
+
+Memory:
+Memory denotes the internal storage space within a computing device used for storing data, instructions, and program code during execution. 
+It encompasses various memory types, including RAM and other forms of storage.
+
+Method:
+Method is a function that is associated with an object or class in object-oriented programming. 
+It defines the behavior or actions that objects of the class can perform.
+
+Mutable:
+Mutable refers to an object or value that can be modified or changed after its creation. 
+Mutable objects allow for in-place modifications, such as adding or removing elements from a list.
+
+Nesting:
+Nesting refers to the practice of placing one data structure inside another, often to create hierarchical or composite structures. 
+For example, nesting lists within lists or dictionaries within dictionaries.
+
+Null:
+Null is a special value used to represent the absence of a value or a non-existent object. 
+It is commonly used to indicate that a variable or pointer does not reference any valid data.
+
+Parameter:
+Parameter is a variable or placeholder in a function or method definition that is used to receive input when the function or method is called. 
+Parameters define the interface of the function and specify the types and order of arguments it expects.
+
+Reference:
+Reference is an identifier or pointer that points to a location in memory where a value or object is stored. 
+It provides a way to access and manipulate data indirectly, enabling dynamic memory allocation and data sharing.
+
+Scope/Context:
+Scope or Context refers to the visibility and accessibility of variables, functions, and other identifiers within a program. 
+It defines where variables and functions can be accessed and modified, determining their lifetime and visibility.
+
+Standard Input:
+Standard Input is a predefined input stream that allows a program to read data from an external source, such as the keyboard or another program. 
+In many programming languages, standard input is represented by the stdin stream.
+
+Standard Output:
+Standard Output is a predefined output stream that allows a program to write data to an external destination, such as the console or another program. 
+In many programming languages, standard output is represented by the stdout stream.
+
+Syntax:
+Syntax refers to the rules and structure governing the arrangement of elements in a programming language. 
+It defines the correct grammar and punctuation required for valid code, ensuring that programs can be interpreted or compiled correctly.
+
+Variable:
+Variable is a named storage location used to store data that may change during the execution of a program. 
+Variables are assigned values and can be referenced or manipulated throughout the program's execution.
+
+'''
 

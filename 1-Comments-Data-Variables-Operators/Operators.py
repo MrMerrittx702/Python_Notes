@@ -17,25 +17,7 @@ Covered in this file:
 > Bitwise Operators
 > Complete Operator Precedence
 '''
-'''
-Vocabulary
-    > Concatenation
-    > Duplication
-    > Cast
-    > Function Call
-    > Arguments
-    > Positional Arguments
-    > Keyword Arguments
-    > Class
-    > Operator
-    > Membership
-    > Identity
-    > Increment
-    > Decrement
-    > Iterable
-    > Binary
-    > Bit
-'''
+
 
 #===============================================================================================================================#
 '> Concatenation (combining strings)'
@@ -480,7 +462,114 @@ not 0   #1            #
   Operations at the same level proceed from left to right
 '''
 
+#===============================================================================================================================#
+'''
+Vocabulary
 
+Arguments
+Arithmetic
+Binary
+Bit
+Bitwise
+Cast
+Class
+Concatenation
+Decrement
+Duplication
+Function Call
+Identity
+Increment
+Iterable
+Keyword Arguments
+Logical
+Membership
+Operator
+Positional Arguments
+Relational
+
+
+Arguments:
+Arguments are values provided to a function or method when it is called. 
+They serve as inputs to the function or method and are used to customize its behavior or provide data for its operation.
+
+Arithmetic:
+Arithmetic refers to the branch of mathematics that deals with the study of numbers and the operations performed on them, such as addition, subtraction, multiplication, and division. 
+In programming, arithmetic operations are used to manipulate numerical data.
+
+Binary:
+Binary is a base-2 numbering system that uses only two digits, 0 and 1, to represent numbers. 
+It is commonly used in computing and digital electronics.
+
+Bit:
+A bit is the smallest unit of data in computing and digital communications. 
+It can have one of two possible values, typically represented as 0 or 1, and is the basic building block of digital information storage and processing.
+
+Bitwise:
+Bitwise operations are operations that are performed at the level of individual bits within binary representations of data. 
+These operations include AND, OR, XOR, and shift operations, and are commonly used in low-level programming and digital circuit design.
+
+Cast:
+Casting refers to the process of converting a value from one data type to another in programming. 
+It allows data to be converted and manipulated in different formats or representations as needed by the program.
+
+Class:
+A class is a blueprint for creating objects in object-oriented programming (OOP). 
+It defines the properties (attributes) and behaviors (methods) that all objects of the class will have. Classes are used to model real-world entities and organize code into reusable components.
+
+Concatenation:
+Concatenation is the process of combining two or more strings, sequences, or data structures into a single entity. 
+In the context of strings, concatenation involves joining the characters of one string to the end of another string.
+
+Decrement:
+Decrement is the process of reducing a value by one. It is the opposite of increment, which involves increasing a value by one. 
+Decrement is commonly used in loops and other programming constructs to iterate over a sequence of values.
+
+Duplication:
+Duplication is the process of creating a copy or duplicate of an existing object, data structure, or value. 
+It allows for the preservation of data and the creation of independent copies that can be modified or manipulated separately.
+
+Function Call:
+A function call is an instruction that tells the program to execute a specific function with certain arguments. 
+When a function is called, control is transferred to the function's code, and the function's return value (if any) is passed back to the caller.
+
+Identity:
+Identity refers to the unique identification of objects or values within a program. 
+In Python, every object has a unique identity, which can be obtained using the id() function. Identity is used to determine whether two variables refer to the same object or value.
+
+Increment:
+Increment is the process of increasing a value by one. 
+It is commonly used in loops and other programming constructs to iterate over a sequence of values. 
+Increment is the opposite of decrement, which involves reducing a value by one.
+
+Iterable:
+An iterable is an object that can be iterated over, meaning that it can be used in a loop to access its elements sequentially. 
+Common examples of iterables in Python include lists, tuples, strings, dictionaries, and sets.
+
+Keyword Arguments:
+Keyword arguments are arguments in a function or method call that are matched to parameters based on their names, allowing for more flexible and readable function calls. 
+Unlike positional arguments, which are matched based on their positions, keyword arguments are matched based on their names.
+
+Logical:
+Logical operations are operations that evaluate logical conditions or expressions and return Boolean values (True or False). 
+Common logical operators include AND, OR, and NOT, which are used to combine or negate Boolean values.
+
+Membership:
+Membership refers to the inclusion of an element within a collection or sequence. 
+In programming, membership testing is the process of checking whether a value is contained in a data structure, such as a list, tuple, set, or dictionary.
+
+Operator:
+An operator is a symbol or keyword that represents a specific operation or action to be performed on one or more operands. 
+Operators are used in expressions to perform arithmetic, comparison, logical, and other types of operations.
+
+Positional Arguments:
+Positional arguments are arguments in a function or method call that are matched to parameters based on their position in the function call. 
+They are assigned to parameters in the same order in which they appear in the function call.
+
+Relational:
+Relational operations are operations that compare two values or expressions and determine their relationship or order. 
+Common relational operators include equal to (==), not equal to (!=), greater than (>), less than (<), greater than or equal to (>=), and less than or equal to (<=).
+
+'''
 
 
 #===============================================================================================================================#

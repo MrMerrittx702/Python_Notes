@@ -15,43 +15,10 @@ Covered in this file:
 > Built-in String Function Calls
 > Built-in String Method Calls
 '''
-'''
-Vocabulary
-    > Character
-    > ASCII
-    > Unicode
-    > Control Code
-    > Decimal 
-    > Hexadecimal
-    > Binary
-    > Octal
-    > Escaping
-    > Sequence
-    > Lexicographical
-    > Indexing
-    > Slicing
-    > Substring
-    > Function
-    > Function Call
-    > Class
-    > Object
-    > Method
-    > Method Call
-    > Parameters
-    > Positional Parameters
-    > Keyword Parameters
-    > Arguments
-    > Positional Arguments
-    > Keyword Arguments
-    > Truncation
-
-
-'''
-
 
 #===============================================================================================================================#
 '> Characters Defined'
-#basic unit of information that represents a letter, number, symbol, or control code
+'   > basic unit of information that represents a letter, number, symbol, or control code'
 
 character = 'a'
 character = '2'
@@ -264,19 +231,19 @@ print("Page 1\fPage 2")
 
 #===============================================================================================================================#
 '> Converting Characters'
-'   > characters can be represented in multiple ways.'
-'   > these are called encodings'
+'   > characters can be represented in multiple ways called encodings.'
 '   > there are builtin function calls to convert between these encodings'
 '   > int(), bin(), hex(), oct(), str(),chr(), ord()'
 
 '> Convert to integer: int()'
 #int() converts to an integer. 
-int(2.17)       # 2  float to int
+int(2.17)       # 2  float to int   truncates, does not round (cuts off at the floating point)
 int("97")       # 97 str to int
-int(0b1100001)  # 97 binary to int
+int(0b1100001)  # 97 binary to int 
 int("1100001",2)# 97 binary to int
-int(0x61)       # 97 hexadecimal to int
+int(0x61)       # 97 hexadecimal to int 
 int("61",16)    # 97 hexadecimal to int
+#++++++++++++++++++++++++++++++++++++++++#
 
 '> Convert to binary: bin()'
 # bin() coverts to binary
@@ -285,9 +252,11 @@ bin(97)     #0b1100001  decimal to binary
 bin(0x61)   #0b1100001 hex to binary
 
 #From character to binary
-bin("a") #TypeError: 'str' object cannot be interpreted as an integer
+#characters cannot be directly converted to binary
+bin("a")      #TypeError: 'str' object cannot be interpreted as an integer
 bin(ord("a")) #returns binary: 0b1100001 
 #use the ord(str) call to convert to decimal first
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
 
 '> Convert to hexadecimal: hex()'
 # hex() coverts to hexadecimal
@@ -296,27 +265,32 @@ hex(97)         # 0x61 decimal to hex
 hex(0b1100001)  # x61 binary to hex
 
 #From character to hex
-hex("a") #TypeError: 'str' object cannot be interpreted as an integer
+#characters cannot be directly converted to hex
+hex("a")      #TypeError: 'str' object cannot be interpreted as an integer
 hex(ord("a")) #0x61
 #use the ord(str) call to convert to decimal first
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
 
 '> Covert to String'
 #str() converts to a string
 str(97) #returns string: 97
+#++++++++++++++++++++++++++++++++#
 
 '> Convert to Character: chr()'
 #chr() converts to a character
 chr(97)         #"a" decimal to character
 chr(0b1100001)  #"a" binary to character
 chr(0x61)       #"a" hex to character
+#++++++++++++++++++++++++++++++++++++++++++#
 
 '> Convert to Ordinal: ord()'
 #ord() coverts a character to its decimal representation
 ord("a") #returns decimal: 97
+
 #===============================================================================================================================#
 '> Strings Defined'
-'>> Strings are immutable (cannot be changed) sequences of characters.'
-'>> If a new string is needed you must create a new one.'
+'   > Strings are immutable (cannot be changed) sequences of characters.'
+'   > If a new string is needed you must create a new one.'
 
 #a string is a sequence of characters and is surrounded by quotation marks
 "Hello World" or 'Hello World'
@@ -337,7 +311,9 @@ print(type("My String")) # <class 'str'>
 
 #===============================================================================================================================#
 '> Strings Concatenation and Duplication'
-#concatenate means to join
+'   > concatenate means to join'
+'   > use + to concatenate two strings'
+'   > use * to duplicate a string'
 
 #String literals next to each other are automatically concatenated
 #useful for breaking up long strings
@@ -384,7 +360,8 @@ str1 > str2   # False
 
 '''
 Length Comparison: 
-If the strings have different lengths but the shorter string is identical to the longer one up to the length of the shorter string, Python considers the shorter string less than the longer one. 
+If the strings have different lengths but the shorter string is identical to the longer one up to the length of the shorter string, 
+Python considers the shorter string less than the longer one. 
 For example, "abc" is less than "abcd".
 ''' 
 str3 = "abc"
@@ -404,11 +381,11 @@ gen_unicode_table()
 
 #===============================================================================================================================#
 '> String Indexing'
-' > are a sequence or string of characters.'
-' > can be thought of as a list of characters.'
-' > strings can be indexed like lists'
-' > each character is given an index starting from 0.'
-' > do not forget about spaces.'
+'   > are a sequence or string of characters.'
+'   > can be thought of as a list of characters.'
+'   > strings can be indexed like lists'
+'   > each character is given an index starting from 0.'
+'   > spaces are counted as characters'
 
 
 '''
@@ -419,7 +396,8 @@ Reverse--> -11 -10 -9 -8 -7 -6 -5 -4 -3 -2 -1
 
 word = "Programming"
 
-#accessing a single character of a string
+#Access a single character of a string with subscripting [].
+#Use indexes to access the specific character
 print( word[0] )# P
 print( word[1] )# r
 print( word[2] )# o
@@ -431,6 +409,8 @@ print( word[-3] )# i
 
 #===============================================================================================================================#
 '> String Slicing'
+'   > slicing is used to create a new substring of the original string'
+
 
 word = "Programming"
 
@@ -441,10 +421,10 @@ Reverse--> -11 -10 -9 -8 -7 -6 -5 -4 -3 -2 -1
 '''
 
 #slicing returns a substring (or a part of the original string)
-#list[start_index:stop_index] Note: the stop_index is not included
-print(word[:5])    # Progr
-print(word[4:])    # ramming
-print(word[0:7])   # Program
+#string[start_index:stop_index] Note: the stop_index is not included
+print(word[:5])    # Progr      beginning to stop_index
+print(word[4:])    # ramming    start_index to end
+print(word[0:7])   # Program    
 print(word[3:11])  # gramming
 print(word[-5:-1]) # mmin
 #note the stop_index is not included in the slice
@@ -455,6 +435,7 @@ print(word[-5:-1]) # mmin
 
 #===============================================================================================================================#
 '> Built in String Function Calls'
+'   > Functions are groups of code that perform a specific task.'
 
 #len(x)  returns the number of characters in the string (note: spaces count as characters)
 len(word) # 11
@@ -966,7 +947,135 @@ def return_bytes(bytes):
 
 return_bytes(b"hello")
 
+#===============================================================================================================================#
 
+''' Vocabulary:
+
+ASCII
+Arguments
+Binary
+Character
+Class
+Control Code
+Decimal 
+Encoding
+Escaping
+Function
+Function Call
+Hexadecimal
+Indexing
+Keyword Arguments
+Keyword Parameters
+Lexicographical
+Method
+Method Call
+Object
+Parameters
+Positional Arguments
+Positional Parameters
+Sequence
+Slicing
+Substring
+Truncation
+Unicode
+UTF-8
+
+ASCII:
+ASCII (American Standard Code for Information Interchange) is a character encoding standard that uses 7 bits to represent characters. 
+It defines codes for 128 characters, including letters, digits, punctuation marks, and control characters.
+
+Arguments:
+Arguments are the values provided to a function or method when it is called. 
+They are passed to the function or method to provide input or data for its operation.
+
+Binary:
+Binary is a base-2 numbering system that uses only two digits, 0 and 1, to represent numbers. 
+It is commonly used in computing and digital electronics.
+
+Character:
+A character is a single unit of written language that can be represented by a symbol, such as a letter, digit, punctuation mark, or special symbol.
+
+Class:
+A class is a blueprint for creating objects in object-oriented programming. 
+It defines the properties (attributes) and behaviors (methods) that all objects of the class will have.
+
+Control Code:
+A control code is a special character in ASCII or Unicode that does not represent a printable character 
+but instead controls some aspect of the text processing, such as formatting or signaling.
+
+Decimal:
+Decimal is a base-10 numbering system that uses digits 0 through 9 to represent numbers.
+
+Encoding:
+Encoding is the process of converting data from one format to another, typically to facilitate storage or transmission. 
+In computing, encoding often refers to representing characters as numeric values according to a specific scheme.
+
+Escaping:
+Escaping is the process of indicating that a character has a special meaning in a programming language or text format, 
+typically by preceding it with a special character called an escape character.
+
+Function:
+A function is a block of organized, reusable code that performs a specific task. 
+It typically takes inputs, performs operations, and returns an output.
+
+Function Call:
+A function call is an instruction that tells the program to execute a specific function with certain arguments.
+
+Hexadecimal:
+Hexadecimal is a base-16 numbering system that uses digits 0 through 9 and letters A through F to represent numbers. 
+It is commonly used in computing to represent binary data more compactly.
+
+Indexing:
+Indexing is the process of accessing individual elements or characters within a sequence by specifying their position or index.
+
+Keyword Arguments:
+Keyword arguments are arguments in a function or method call that are matched to parameters based on their names, allowing for more flexible and readable function calls.
+
+Keyword Parameters:
+Keyword parameters are parameters in a function or method definition that are used to receive inputs when the function or method is called, specified by their names.
+
+Lexicographical:
+Lexicographical refers to the order in which strings or sequences are sorted based on their character codes or values, similar to alphabetical order.
+
+Method:
+A method is a function that belongs to a class and operates on its instances (objects).
+
+Method Call:
+A method call is an instruction that tells the program to execute a specific method on a particular object.
+
+Object:
+An object is an instance of a class. It is a concrete realization of the class blueprint, with its own unique data and state.
+
+Parameters:
+Parameters are variables in a function or method definition that are used to receive inputs when the function or method is called.
+
+Positional Arguments:
+Positional arguments are arguments in a function or method call that are matched to parameters based on their position in the function call.
+
+Positional Parameters:
+Positional parameters are parameters in a function or method definition that are used to receive inputs when the function or method is called, specified by their positions.
+
+Sequence:
+A sequence is an ordered collection of elements, typically of the same data type, that can be indexed or iterated over.
+
+Slicing:
+Slicing is the process of extracting a portion of a sequence by specifying a range of indices.
+
+Substring:
+A substring is a contiguous sequence of characters within a larger string.
+
+Truncation:
+Truncation is the process of removing digits or characters from the end of a number or string without rounding or altering its value.
+
+Unicode:
+Unicode is a computing standard that provides a unique number for every character, regardless of platform, program, or language. 
+It aims to represent every character in all known writing systems.
+
+UTF-8:
+UTF-8 (Unicode Transformation Format-8) is a character encoding standard for representing Unicode characters in computers. 
+It is a variable-width encoding that can represent every character in the Unicode character set using one to four bytes.
+
+'''
 
  
 
@@ -1026,61 +1135,3 @@ return_bytes(b"hello")
 
 
 
-'''
-Extension:
-  > f strings
-
-'''
-
-
-'ASCII table/ UTF-8'
-
-'''
-
-
-Generated ascii table with the code below
-
-def make_chars(start, end):
-   str = ""
-   for x in range(start,end+1):
-      str+=chr(x)
-   return str
-
-def encode(characters):
-   print("| Character | Decimal | Hexadecimal |  Binary  | Octal |")
-
-   for char in characters:
-      dec_ = ord(char)
-      hex_ = str(hex(dec_))
-      bin_ = str(bin(dec_))
-      oct_ = str(oct(dec_))
-      dec_ = str(dec_)
-      
-      print(f"|     {char}     |",end ="")
-      print_spaced(" Decimal ",dec_)
-      print_spaced(" Hexadecimal ",hex_)
-      print_spaced("  Binary  ",bin_)
-      print_spaced(" Octal ",oct_)
-      print()
-
-def print_spaced(str, data):
-   diff = len(str) - len(data)
-   front = diff//2
-   back = diff - front
-   print((front*" ") + data + (back*" ") + "|",end="")
-
-symbols1 = make_chars(33,47)# !"#$%&'()*+,-./
-numbers = "0123456789"
-symbols2 = make_chars(58,64)# :;<=>?@
-lower_alphabet = "abcdefghijklmnopqrstuvwxyz"
-symbols3 = make_chars(91,96)# [\]^_`
-upper_alphabet = lower_alphabet.upper() #ABCDEFGHIJKLMNOPQRSTUVWXYZ
-
-symbols4 = make_chars(123,126)# {|}~
-
-ascii_chars = [symbols1,numbers,symbols2,lower_alphabet,symbols3,upper_alphabet,symbols4]
-for group in ascii_chars:
-   encode(group)
-   print()
-
-'''
