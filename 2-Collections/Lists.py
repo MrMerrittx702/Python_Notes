@@ -116,10 +116,10 @@ alpha = [
 
 #Check Membership (in/not in)
 "a" in alpha    #True
-"5" in numerals #True
+"1" in numerals #True
 
 "a" not in alpha    #False
-"5" not in numerals #False
+"1" not in numerals #False
 
 #Concatenation (+)
 numerals + alpha
