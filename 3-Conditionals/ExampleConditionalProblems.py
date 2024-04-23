@@ -130,4 +130,73 @@ else:
 
 
 
-  
+#Check if a character is a vowel or a consonant
+
+char = input().lower()
+
+if char in "aeiou":
+    print(f'{char} is a VOWEL')
+else:
+    print(f'{char} is a Consonant')
+
+
+#Determine the type of triangle based on side length
+
+a_size = float(input())
+b_size = float(input())
+c_size = float(input())
+
+
+if(a_size == b_size == c_size):
+    print("Equalateral Triangle")
+elif(a_size == b_size or a_size == c_size or b_size == c_size):
+    print("Isosceles Triangle")
+else:
+    print("Scalene Triangle")
+
+
+#Check if a number is within a given range
+
+num = int(input("Enter a whole number: "))
+low = 10
+high = 100
+
+if low <= num <= high:
+    print(f"{num} is in the range")
+else:
+    print(f"{num} is not in the range")
+
+#OR
+if num in range(low,high+1):
+    print(f"{num} is in the range")
+else:
+    print(f"{num} is not in the range")
+
+
+#Determine the quadrant of a coordinate point 
+x = float(input("Enter x coordinate: "))
+y = float(input("Enter y coordinate: "))
+if x > 0 and y > 0:
+    print("Quadrant I")
+elif x < 0 and y > 0:
+    print("Quadrant II")
+elif x < 0 and y < 0:
+    print("Quadrant III")
+elif x > 0 and y < 0:
+    print("Quadrant IV")
+else:
+    print("On the axes or origin")
+
+
+#Determine the type of quadrilateral
+a = float(input("Enter side a: "))
+b = float(input("Enter side b: "))
+c = float(input("Enter side c: "))
+d = float(input("Enter side d: "))
+
+if a == b == c == d:
+    print("Square")
+elif a == c and b == d:
+    print("Rectangle")
+else:
+    print("Quadrilateral")

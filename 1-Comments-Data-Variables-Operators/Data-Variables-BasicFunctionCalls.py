@@ -3,16 +3,17 @@
 #===============================================================================================================================#
 '''
 Covered in this file:
-  > General Syntax
-  > Data Types
-  > Literals (actual values)
-  > Variables (containers that store values)
-  > Type Annotations: Declaring Variable Type
-  > Aliases (reference the same data)
-  > Print Function Call
-  > Input Function Call
-  > Nesting (put one thing inside of another)
+    > General Syntax
+    > Data Types
+    > Literals (data)
+    > Variables (pointers to data)
+    > Type Annotations: Declaring Variable Type
+    > Aliases (point to the same location)
+    > Print Function Call
+    > Input Function Call
+    > Nesting (put one thing inside of another)
 '''
+
 #===============================================================================================================================#
 '> General Syntax'
 
@@ -137,10 +138,22 @@ True          # boolean(True or False)
   Immutable " you cannot change the data it holds" 
       (numbers, booleans, strings, tuples)
 '''
-#The type() function can be used to check the type of data
+
+
+#The type() function returns the type of data passed to it.
 type()
-type(5) # <class 'int'>
-type("text") # <class 'str'>
+
+type(None)                   #<class 'NoneType'>
+type(True)                   # <class 'bool'>
+type(5)                      # <class 'int'>
+type(3.14)                   # <class 'float'>
+type(1j)                     # <class 'complex'>
+type("a")                    # <class 'str'>
+type("Hello")                # <class 'str'>
+type(["a","b","c"])          # <class 'list'>
+type(("a","b","c"))          # <class 'tuple'>
+type({"a","b","c"})          # <class 'set'>
+type({"a":97,"b":98,"c":99}) # <class 'dict'>
 
 
 
@@ -177,7 +190,9 @@ True              # boolean literal
 
 
 #===============================================================================================================================#
-'> Variables are containers that store data values'
+'> Variables'
+'   > act like containers that store data values.'
+'   > however, variables are pointers that reference a location in memory where a data value is stored.'
 
 # use a single equals sign (=) to assign a value to a variable.
 # the equal sign must always be on the left side of the operation
@@ -186,6 +201,7 @@ True              # boolean literal
 container = "Hello World"
 
 #assigning variables
+# assigning a variables defines where the variable points to in memory.
 a = "Hello World"
 b = 5
 c = 3.14
@@ -196,7 +212,8 @@ f = 2; g = 3; h = 4 #assign on the same line with ";"
 #or
 i , j , k = 5, 6, 7 
 
-#change a variables value (reassigning)
+# change a variables value (reassigning)
+# reassigning a variable changes where it points to in memory.
 a = 0
 a = 1
 a = 2
@@ -210,7 +227,7 @@ print(a)
     > Cannot start with a number
     > Can only contain a-z, A-Z, 0-9, and "_" characters
     > Cannot contain spaces
-    > Variables should be named after what they store/represent
+    > Variables should be named after what they store/reference
 '''
 
 #Legal Variable Names
@@ -230,48 +247,78 @@ v ar = 0
 @#$%@ = 0
 '''
 
+'   > Variables are pointers to locations in memory.'
+#Use the id() function call to return the memory location to which variable points.
+# Returns a <class 'int'> that is a unique identifier for a location in memory where the data is stored.
+# The number will potentially be different each time the program is executed. 
+memory_pointer = "Hello World"
+id(memory_pointer) # 139029363861936
+
+memory_pointer = 10
+id(memory_pointer) # 139029373780496
 
 #===============================================================================================================================#
 '> Aliases'
-' > assigning one variable to store another variable is called aliasing.'
-' > the variables pass a reference to the data they store.'
+'   > assigning one variable to store another variable is called aliasing.'
+'   > the variables pass a reference to the data they store.'
 a = "some text"
 
 #a, b, and c are aliases (ie they point to the same data)
 b = a 
 c = b
-print(b) # some text
-print(c) # some text
+print(a)     # some text
+print(b)     # some text
+print(c)     # some text
+print(id(a)) # 125810368587504 <-- Same Memory Location
+print(id(b)) # 125810368587504 <-- Same Memory Location
+print(id(c)) # 125810368587504 <-- Same Memory Location
 
-# a points to a new value
+
+# Pointing the variable 'a' to a new value
 a = "a was changed"
-print(b) # some text
-print(c) # some text
+print(a)     # a was changed
+print(b)     # some text
+print(c)     # some text
+print(id(a)) # 125810368883120 <-- New Memory Location
+print(id(b)) # 125810368587504 <-- Same Memory Location
+print(id(c)) # 125810368587504 <-- Same Memory Location
 
-# b points to a new value
+# Pointing the variable 'b' to a new value
 b = "b was changed"
-print(a) # a was changed
-print(c) # some text
-
-# c points to a new value
+print(a)     # a was changed
+print(b)     # b was changed
+print(c)     # some text
+print(id(a)) # 125810368883120
+print(id(b)) # 125810368882544 <-- New Memory location
+print(id(c)) # 125810368587504 
+ 
+# Pointing the variable 'c' to a new value.
 c = "c was changed"
-print(a) # a was changed
-print(b) # b was changed
+print(a)     # a was changed
+print(b)     # b was changed
+print(c)     # c was changed
+print(id(a)) # 125810368883120 <-- Different Memory Location
+print(id(b)) # 125810368882544 <-- Different Memory Location 
+print(id(c)) # 125810368880496 <-- Different Memory Location
 
-#if a,b, and c point to a mutable data type 
-# a change in the data is reflected in all variables. 
+
+# If variables point to the same mutable data type: 
+# a change in the data is reflected in all the variables. 
 a = [1,2,3]
 b = a
 c = b
 c[0] = 999
-print(a) # [999, 2, 3]
-print(b) # [999, 2, 3]
-print(c) # [999, 2, 3]
+print(a)     # [999, 2, 3]
+print(b)     # [999, 2, 3]
+print(c)     # [999, 2, 3]
+print(id(a)) # 125810368584576 <-- Same Memory Location 
+print(id(b)) # 125810368584576 <-- Same Memory Location
+print(id(c)) # 125810368584576 <-- Same Memory Location
 
 #===============================================================================================================================#
 '> Type Annotations: Declaring Variable type'
 
-' > Type Annotation is a way to declare the type of data the variable is expected to store, but is not enforced by the interpretor'
+' > Type Annotation is a way to declare the type of data the variable is expected to store, but is not enforced by the interpreter'
 #variable_name: type = literal
 boolean: bool = True
 num: int = 10
@@ -282,6 +329,154 @@ list1d: list = ["a","b","c"]
 tuple1d: tuple = ("a","b","c")
 set1d: set = {"a","b","c"}
 dictionary: dict = {"a": 97, "b": 98, "c":99}
+
+#===============================================================================================================================#
+#===============================================================================================================================#
+'> Variable Scope/Context'
+'   > variables have a scope in which they can be accessed'
+'   > Scope can be global, local, or nonlocal'
+'   > The global keyword can be used to access and modify global variables'
+'   > The nonlocal keyword can be used to access on scope up'
+'   > Python looks for variables by searching from the most local scope, to the least local scope.'
+'''
+Scope/Context:
+Scope or Context refers to the visibility and accessibility of variables, functions, and other identifiers within a program. 
+It defines where variables and functions can be accessed and modified, determining their lifetime and visibility.
+'''
+
+'> Global Scope'
+# any variable created inside of a file(module), but not inside of another construct is a global variable
+var = 10 # var is global
+
+#Unlike other languages, variables created inside of a Conditional, or Loop are accessible outside of that construct.
+
+#if example
+if(False): 
+    x = "x"
+    y = "y"
+    #here the if block does not execute
+    # x and y are never defined
+
+# This leads to an error:
+# print(x) # NameError: name 'x' is not defined
+# print(y) # NameError: name 'y' is not defined
+
+if(True):
+    x = "x"
+    y = "y"
+    #here the block executes so x and y are now defined 
+
+#Outside of the if x and y can still be printed
+print(x) # x
+print(y) # y
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+#While example
+
+i = 0
+while(i<1):
+    while_var = "while"
+    i += 1
+    #here variable is defined inside the while 
+
+#Here 'while_var' can be accessed and printed outside of the while loop
+print(while_var) # while 
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+#For Example
+for num in range(5):
+    for_var = "for"
+    #both 'num' and 'for_var' have been defined in the for loop 
+
+#Here both 'num' and 'for_var' can both be accessed outside of the loop
+print(num)
+print(for_var)
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+
+'> Local Scope'
+# any variable created inside of a Function, Class, etc. is local to that construct
+def example(parameter):
+    function_var = "function"
+    print(parameter) 
+    print(function_var)
+    # parameters only exist inside of the function definition
+    #'function_var' only exists inside of the function definition
+
+example("argument") # even if you call the function before parameter and function_var are not accessible
+
+# print(parameter) #NameError: name 'parameter' is not defined
+# print(function_var) #NameError: name 'function_var' is not defined
+
+
+#Class Example
+class Example:
+    #local to the class Example
+    class_var = "Class" 
+    print(class_var) # Class
+
+#class_var is only accessible inside of Example, or through Example, or through an instance of Example
+# print(class_var) #NameError: name 'class_var' is not defined
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+
+' global keyword'
+'   > global can be used to access and modify a global scope variable'
+
+text = "I am global"
+
+def example():
+    text = "I am local"
+
+example()
+
+#prints the global 'text', not the local 'text'
+print(text) # I am global
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+
+text = "I am global"
+
+def example():
+    global text #access the global 'text'
+
+    text = "Made a local change"
+
+print(text) # I am global
+example()   # Changes only occur after the function has been called. 
+print(text) # Made a local change
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+'nonlocal keyword'
+'   > use nonlocal to access 1 scope up'
+
+
+text = "I am global"
+
+def outer():
+    text = "I am nonlocal to inner"
+    def inner():
+        nonlocal text
+        text ="Changed the nonlocal text"
+    inner()
+
+    print(text) #Changed the nonlocal text
+
+outer() #Changed the nonlocal text
+
+'Special Errors'
+
+
+x = 'global'
+
+def example():
+    print(x) # global 'accesses x 1 scope out no problem'
+
+example()
+
+#Look at this Error though
+x = "global"
+
+def example():
+    print(x) #UnboundLocalError: local variable 'x' referenced before assignment
+    x = "Change global x"
+
+#Python assumes that since you created a local 'x' you ment to print the local 'x' and not the global 'x'
+example()    
 
 
 #===============================================================================================================================#
@@ -395,5 +590,129 @@ print(int(input("Type a number")))
 #The input function is inside of the int function which is inside of the print function.
 
 #===============================================================================================================================#
+'''
+Vocabulary:
 
+Alias
+Annotation
+Argument
+Class
+Collection
+Cursor
+Function
+Function Call
+Immutable
+Interpreter
+Literal
+Member
+Memory
+Method
+Mutable
+Nesting
+Null
+Parameter
+Reference
+Scope/Context
+Standard Input
+Standard Output
+Syntax
+Variable
+
+Alias:
+Alias is an alternative name or identifier that refers to the same entity as another name. 
+It's commonly used to provide alternative names for variables, functions, modules, or other program elements.
+
+Annotation:
+Annotation is metadata or additional information associated with a program element like a variable, function, class, or method. 
+Annotations are typically used for documentation, type hints, or other context to aid in program understanding or analysis.
+
+Argument:
+Argument is a value passed to a function or method when calling it. 
+It provides input or data for the function's operation, allowing the function to perform its task with specific values or parameters.
+
+Class:
+Class is a blueprint for creating objects in object-oriented programming (OOP). 
+It defines the properties (attributes) and behaviors (methods) that objects of the class will have. Classes provide a way to model real-world entities and organize code into reusable components.
+
+Collection:
+Collection refers to a grouping of related elements or items stored and manipulated together as a single unit. 
+It encompasses various data structures like lists, sets, dictionaries, arrays, and tuples.
+
+Cursor:
+Cursor is a pointer or indicator used to navigate through a data set or data structure, often seen in databases or file processing. 
+Cursors facilitate reading, updating, or manipulating data records sequentially or selectively.
+
+Function:
+Function is a self-contained block of code designed to perform a specific task or operation. 
+It may accept input arguments, perform computations, and return results, enabling code modularity and reusability.
+
+Function Call:
+Function Call is an instruction that invokes a specific function with provided arguments. 
+It triggers the execution of the function's code, and upon completion, the function may return a result or perform other actions as defined.
+
+Immutable:
+Immutable refers to an object or value that cannot be modified or altered after its creation. 
+Immutable objects maintain their state throughout their lifetime, promoting stability and preventing unintended changes.
+
+Interpreter:
+Interpreter is a program responsible for executing source code directly, typically line by line. 
+It interprets and translates code instructions into machine-understandable form at runtime, commonly used in scripting languages like Python.
+
+Literal:
+Literal is a notation representing a fixed value directly within source code. 
+It may denote constants like numeric values, strings, boolean literals, or other primitive data types in their explicit, recognizable form.
+
+Member:
+Member refers to an element or part belonging to a group, class, or collection. 
+In programming, it commonly signifies variables, functions, or other entities associated with a class, module, or data structure.
+
+Memory:
+Memory denotes the internal storage space within a computing device used for storing data, instructions, and program code during execution. 
+It encompasses various memory types, including RAM and other forms of storage.
+
+Method:
+Method is a function that is associated with an object or class in object-oriented programming. 
+It defines the behavior or actions that objects of the class can perform.
+
+Mutable:
+Mutable refers to an object or value that can be modified or changed after its creation. 
+Mutable objects allow for in-place modifications, such as adding or removing elements from a list.
+
+Nesting:
+Nesting refers to the practice of placing one data structure inside another, often to create hierarchical or composite structures. 
+For example, nesting lists within lists or dictionaries within dictionaries.
+
+Null:
+Null is a special value used to represent the absence of a value or a non-existent object. 
+It is commonly used to indicate that a variable or pointer does not reference any valid data.
+
+Parameter:
+Parameter is a variable or placeholder in a function or method definition that is used to receive input when the function or method is called. 
+Parameters define the interface of the function and specify the types and order of arguments it expects.
+
+Reference:
+Reference is an identifier or pointer that points to a location in memory where a value or object is stored. 
+It provides a way to access and manipulate data indirectly, enabling dynamic memory allocation and data sharing.
+
+Scope/Context:
+Scope or Context refers to the visibility and accessibility of variables, functions, and other identifiers within a program. 
+It defines where variables and functions can be accessed and modified, determining their lifetime and visibility.
+
+Standard Input:
+Standard Input is a predefined input stream that allows a program to read data from an external source, such as the keyboard or another program. 
+In many programming languages, standard input is represented by the stdin stream.
+
+Standard Output:
+Standard Output is a predefined output stream that allows a program to write data to an external destination, such as the console or another program. 
+In many programming languages, standard output is represented by the stdout stream.
+
+Syntax:
+Syntax refers to the rules and structure governing the arrangement of elements in a programming language. 
+It defines the correct grammar and punctuation required for valid code, ensuring that programs can be interpreted or compiled correctly.
+
+Variable:
+Variable is a named storage location used to store data that may change during the execution of a program. 
+Variables are assigned values and can be referenced or manipulated throughout the program's execution.
+
+'''
 

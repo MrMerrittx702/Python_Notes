@@ -2,11 +2,8 @@
 '''Python Conditionals'''
 #===============================================================================================================================#
 
-#iterate: repitition of a process or function
-#condition: statement that evaluates True/False to determine if a code block is run.
-
 '''
-  Covered in this video:
+  Covered in this file:
   > Review: Booleans, Relational Operators,and  Logical Operators
   > Boolean Expressions 
   > Python Indentation and Code Blocks
@@ -14,9 +11,10 @@
   > if-else Statements
   > Chained Conditionals 
   > Nested Conditionals 
-  > Ternary Operators: Shorthand Conditionals`
+  > Ternary Operators: Shorthand Conditionals
   > Match Statements
 '''
+
 #===============================================================================================================================#
 '> Review: Booleans, Relational Operators, and  Logical Operators'
 
@@ -39,14 +37,14 @@ False
 != #not equal to
 
 #Special to python
-is # identical to
-is not # not identical to
-in # apart of
-not in # not apart of
+is      # identical to
+is not  # not identical to
+in      # apart of
+not in  # not apart of
 
 #Logical Operators (for multiple conditions)
 #Order of Operations NAO
-not  # opposite: ~T --> F // ~F --> T
+not  # opposite: not T --> F // not F --> T
 and  #both : T and T --> T //all others are F
 or   # at least 1: F or F --> F // all others are T
 '''
@@ -86,44 +84,48 @@ print(x == y) #False
   All statements within the same block must have the same level of indentation. 
   The end of a block is indicated by the decrease in indentation level. 
 '''
+
 #examples
 condition = True or False
 
 if(condition):
-    #start of the if code block
+    #start of the if code block (scope/context)
     print("Inside the if statement")
 
-#end of the if code block
+#end of the if code block (scope/context)
+
 while(condition):
-    #start of the while code block
+    #start of the while code block (scope/context)
     print("Inside the while loop")
 
-#end of the while code block
+#end of the while code block (scope/context)
+
 for _ in range(10):
-    #start of the for code block
+    #start of the for code block (scope/context)
     print("Inside the for loop")
 
-#end of the for code block
+#end of the for code block (scope/context)
+
 def function_():
-    #start of the function code block
+    #start of the function code block (scope/context)
     print("Inside of the function definition")
 
-#end of the function code block
+#end of the function code block (scope/context)
   
 #Nested Indentation# Blocks inside of blocks
 def example_():
-    #start of function code block--------------------------#
+    #start of function code block###########################
     for _ in range(5):                                     #
-        #start of for code block----------------------#    #
+        #start of for code block++++++++++++++++++++++#    #
         while(condition):                             #    #
-            #start of while code block -----------#   #    #      
+            #start of while code block============#   #    #      
             if(condition):                        #   #    #
                 #Start of if code block ------#   #   #    #
                 print("So many indents!")     #   #   #    #
             #end of if code block-------------#   #   #    #
-        #end of while code block------------------#   #    #
-    #end of for code block----------------------------#    #
-#end of function code block--------------------------------#
+        #end of while code block==================#   #    #
+    #end of for code block++++++++++++++++++++++++++++#    #
+#end of function code block#################################
 
 
 '''
@@ -166,11 +168,23 @@ if(False): #----------#
 
 '''
   Special Notes for Conditionals:
-    When writing if statments you will often get output, sometimes even correct output, but you code does not work as intended in every case. 
-    Any non-zero number (integer, float) is evaluated as True
-    Any non-empty string, list, tuple, set, or dictionary,  is evaluated as True
-    Any function, method, lambda or class is evaluated as True
-    By default objects are evaluated True, but how an object is evaluated can be changed.
+    > When writing if statments you will often get output, 
+        sometimes even correct output, but your code does not work 
+        as intended in every case. 
+
+    Integers/Floats   
+        > Any non-zero number (integer, float) is evaluated as True
+    
+    Strings,Lists, Tuples, Sets, Dictionaries
+        > Any non-empty string, list, tuple, set, or dictionary,  
+          is evaluated as True
+    
+    Functions, Methods, Lambdas, Classes
+        > Any function, method, lambda or class is evaluated as True
+    
+    Objects
+        > By default objects are evaluated True, 
+          but how an object is evaluated can be changed.
 '''
 
 #===============================================================================================================================#
@@ -357,5 +371,82 @@ match character:
         print("")
 
 
+#===============================================================================================================================#
+'''
+Vocabulary:
 
+Arithmetic
+Bitwise
+Boolean Expression
+Condition
+Conditional
+Expression
+Iteration
+Logical
+Match
+Nesting
+Relational 
+Scope/Context
+Ternary Operator
+Truth Table
+
+
+
+Arithmetic:
+Arithmetic refers to the mathematical operations performed on numerical data, such as addition, subtraction, multiplication, and division. 
+It involves manipulating numerical values to perform calculations.
+
+Bitwise:
+Bitwise operations are operations performed on individual bits of binary numbers. 
+They include operations such as AND, OR, XOR, and shifting, which manipulate the binary representation of numbers at the bit level.
+
+Boolean Expression:
+A boolean expression is an expression that evaluates to either true or false. 
+It typically involves logical operators (such as AND, OR, NOT) applied to boolean values or conditions, used for decision-making in control structures.
+
+Condition:
+A condition is a statement or expression that evaluates to a boolean value (true or false). 
+It is often used to determine the flow of execution in a program, controlling the execution of certain blocks of code based on whether the condition is true or false.
+
+Conditional:
+Conditional statements or constructs are control structures used to execute different blocks of code based on specified conditions. 
+They include if statements, switch statements, and other conditional branching mechanisms.
+
+Expression:
+An expression is a combination of variables, constants, operators, and function calls that evaluates to a single value. 
+Expressions can represent calculations, comparisons, or other operations, and they can be used in assignments, conditions, or function calls.
+
+Iteration:
+Iteration is the process of repeatedly executing a set of instructions or operations, typically over a sequence of elements or until a certain condition is met. 
+It involves looping constructs like for loops, while loops, or iterators.
+
+Logical:
+Logical operations involve evaluating boolean expressions or conditions to determine their truth value. 
+Logical operators such as AND, OR, and NOT are used to combine or negate boolean values, facilitating decision-making in control flow.
+
+Match:
+Match is a control structure used to compare an expression against multiple patterns and execute the code associated with the first matching pattern. 
+It provides a concise and expressive way to handle multiple conditions or cases.
+
+Nesting:
+Nesting refers to the practice of placing one construct or block of code inside another. 
+It involves encapsulating code within other code blocks, such as loops inside loops or conditional statements inside other conditionals.
+
+Relational:
+Relational operators are used to compare the relationship between two values or expressions. 
+They include operators such as equal to (==), not equal to (!=), greater than (>), less than (<), greater than or equal to (>=), and less than or equal to (<=).
+
+Scope/Context:
+Scope or context refers to the visibility and accessibility of variables, functions, and other identifiers within a program. 
+It defines where variables and functions can be accessed and modified, determining their lifetime and visibility.
+
+Ternary Operator:
+The ternary operator, also known as the conditional operator, is a compact form of an if-else statement used to make decisions based on a condition. 
+
+
+Truth Table:
+A truth table is a table used in logic to represent the truth values of logical expressions. 
+It lists all possible combinations of input values for the variables in the expression and shows the resulting truth values of the expression for each combination. Truth tables are commonly used to analyze and verify the behavior of logical expressions and circuits.
+
+'''
 

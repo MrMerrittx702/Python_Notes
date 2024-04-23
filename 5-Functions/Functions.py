@@ -24,9 +24,6 @@ Covered in this file:
 > Function Examples Including Control Structures
 '''
 
-#Sequential --> a program executes from top to bottom, left to right
-#Functions help simplify  and group code
-
 #===============================================================================================================================#
 'Function Definition'
 '''
@@ -51,7 +48,7 @@ def function_name():
 def function_name(parameter1,parameter2, ___ ):      #
   #indent into the function definition               #
   ... #What the function does                        #
-  return #a value                                    #
+  return #answer/result of the function              #
 #unindent to exit the function definition------------#
 
 
@@ -75,49 +72,54 @@ def count_to(number):
 condition = True or False
 
 if(condition):
-    #start of the if code block
+    #start of the if code block (scope/context)
     print("Inside the if statement")
 
-#end of the if code block
+#end of the if code block (scope/context)
+
 while(condition):
-    #start of the while code block
+    #start of the while code block (scope/context)
     print("Inside the while loop")
 
-#end of the while code block
+#end of the while code block (scope/context)
+
 for _ in range(10):
-    #start of the for code block
+    #start of the for code block (scope/context)
     print("Inside the for loop")
 
-#end of the for code block
+#end of the for code block (scope/context)
+
 def function_():
-    #start of the function code block
+    #start of the function code block (scope/context)
     print("Inside of the function definition")
 
-#end of the function code block
+#end of the function code block (scope/context)
   
 #Nested Indentation# Blocks inside of blocks
 def example_():
-    #start of function code block--------------------------#
+    #start of function code block###########################
     for _ in range(5):                                     #
-        #start of for code block----------------------#    #
+        #start of for code block++++++++++++++++++++++#    #
         while(condition):                             #    #
-            #start of while code block -----------#   #    #      
+            #start of while code block============#   #    #      
             if(condition):                        #   #    #
                 #Start of if code block ------#   #   #    #
                 print("So many indents!")     #   #   #    #
             #end of if code block-------------#   #   #    #
-        #end of while code block------------------#   #    #
-    #end of for code block----------------------------#    #
-#end of function code block--------------------------------#
+        #end of while code block==================#   #    #
+    #end of for code block++++++++++++++++++++++++++++#    #
+#end of function code block#################################
+
 
 '''
 Note:
-  Indentation is typically achieved using spaces or tabs. 
-  Don't mix spaces and tabs, it can lead to syntax errors or inconsistent behavior. 
-  Python 3 disallows mixing tabs and spaces for indentation in the same source file.
+Indentation is typically achieved using spaces or tabs. 
+Don't mix spaces and tabs, it can lead to syntax errors or inconsistent behavior. 
+Python 3 disallows mixing tabs and spaces for indentation in the same source file.
 
-  If you are using an editor like VS code using the tab key, and spaces is not a problem. 
+If you are using an editor like VS code using the tab key, and spaces is not a problem. 
 '''
+
 #===============================================================================================================================
 'Function Calling '
 '''
@@ -146,15 +148,14 @@ count_to(10)# 1 2 3 4 5 6 7 8 9 10
 
 #===============================================================================================================================
 'Returning a value: return'
-'''
-  > Returning multiple values
+'   > a function returns the result/answer of the function back to the caller'
+'   > this is done with the "return" keyword'
+'   > all functions return None (NULL) by default in python'
+'   > the return keyword defines what the function returns.'
+'   > When a function returns it immediately ends, skipping any remaining code.'
+'   > returning does not display results on the console (ie print)'
+'   > multiple values can be returned as a tuple'
 
-  The 'return' keyword is used to send a function's result back to the caller
-    > When a function returns it immediately ends, lines after the return do not execute
-    > return does not print
-    > functions that do not return a value automatically return 'None'
-    > None or NULL means nothing or no value
-'''
 
 #function definition
 def function_name():
@@ -168,8 +169,8 @@ print(function_name())#prints the return
 result = function_name() #assigns the return 
 
 
-'Returning multiple values'
-' > Functions can return multiple values as a tuple'
+'   > Returning multiple values'
+'       > Functions can return multiple values as a tuple'
 
 def return_multiple():
     return "a", "b", "c" #return values are seperated with a comma
@@ -183,22 +184,14 @@ print(third) # c
 
 #===============================================================================================================================
 'Parameters: function variables'
-'''
-  > Default Parameter Values
+'   > named variables listed in the parenthesis of a function definition'
+'   > represent unknown literal values'
+'   > there can be 0,1 or more parameters seperated by a comma'
+'   > are assigned a value by arguments when the function is called'
+'   > are local to the function definition'
+'   > Parameters go with Function Definitions'
+'   > Can be assigned default values with = '
 
-  Parameters: 
-    > are named variables passed into a function definition
-    > represent unknown literal values
-    > are assigned values when the function is called
-    > are listed in parenthesis and apart of a functions definition
-    > only exist inside of the function definition (local scope)
-
- 
-  Think defining -->  Think parameters
-
-  Functions can have 0, 1 or more parameters
-    > seperated with a comma
-'''
 
 
 #def function_name(parameter1, parameter2, ...):
@@ -224,9 +217,9 @@ calc_product(4,3)# arguments here
 
 
 
-'Default Parameter Values'
-' > Parameters can be given default values'
-' > Parameters with a defualt can be provided and argument, but do not require one'
+'   > Default Parameter Values'
+'       > Parameters can be given default values'
+'       > Parameters with a defualt can be provided an argument, but do not require one (optional)'
 
 #Default argument values
 def has_defaults(p1,p2 = "p2 is defualt",p3 = "p3 is defualt"):
@@ -251,17 +244,12 @@ example() # 5
 
 #===============================================================================================================================
 'Arguments: parameter values'
-'''
-  Arguments 
-  > are the actual values assigned to a parameter when calling the function
-  > are required for each parameter without a default value
-  > can be passed a value from a variable
-  > are listed in parenthesis and apart of a function call
-  > seperated with a comma
-
-  Think calling --> Think arguments
-'''
-
+'   > values assigned to a parameter when calling a function'
+'   > each argument is seperated with a comma'
+'   > are required for each parameter without a default value'
+'   > can be a variable that references a value'
+'   > are listed in parenthesis as apart of a function call'
+'   > Arguments go with Function Calls'
 
 #
 #Definition-----------------------------------------------------------------#
@@ -272,8 +260,8 @@ def accepts_arguments(parameter_1,parameter_2):                             #
 
 
 #Function Call
-#function_name(argument1,argument2,...)
-accepts_arguments("Hello", "World")
+#   function_name(argument1,argument2,...)
+accepts_arguments("Hello", "World") 
 
 #example
 def calc_product(x,y): #parameters here
@@ -286,18 +274,18 @@ calc_product(4,3) #arguments here
 #===============================================================================================================================
 'Positional Arguments vs Keyword Arguments'
 '''
-  Positional Arguments correspond to parameters based on position
-  > Unpacking Positional Arguments
-  > Forcing Positional Arguments
+    Positional Arguments correspond to parameters based on position
+        > Unpacking Positional Arguments
+        > Forcing Positional Arguments
 
 
-  Keyword Arguments correspond to parameters base on name
-  > Unpacking Keyword Arguments
-  > Forcing Keyword Arguments
+    Keyword Arguments correspond to parameters base on name
+        > Unpacking Keyword Arguments
+        > Forcing Keyword Arguments
 '''
 
-'Positional Arguments'
-' > assigned based on position'
+'> Positional Arguments'
+'   > assigned based on position'
 
 #position        1       2      3
 def positional(first, second, third):
@@ -333,10 +321,10 @@ print(list(range(*nums)))  # [1,2,3,4,5,6,7,8,9]
 #          * unpacks the args list
 
 '> Forcing Positional Arguments (/)'
-' > Use / to force arguments to be assigned by postion only'
-' > Arguments appearing before the / are forced'
-' > Arguments apperaing after the / are not'
-' > use positional-only if the name of parameters do not matter, or the names should not be available to the user.'
+'   > Use / to force arguments to be assigned by position only'
+'   > Arguments appearing before the / are forced'
+'   > Arguments apperaing after the / are not'
+'   > use positional-only if the name of parameters do not mat ter, or the names should not be available to the user.'
 
 #def function_name(pos1,pos2,/,pos_or_kwd,*,kwd1,kwd2): positional only, positional or keyword, keyword only
 def position_forced(p1,p2,/):
@@ -347,7 +335,7 @@ position_forced(p2 = "World", p1 = "Hello")
 
 
 'Keyword Arguments'
-' > assigned based on name'
+'   > assigned based on name'
 
 def keyword(name, age, grade, school):
     return f"Hello {name}, you are {age} years old, in grade {grade}, and attend {school}"
@@ -359,7 +347,7 @@ keyword("Sam", 16, 11, "LWM Academy")
 keyword(grade = 11, name = "Sam", school = "LWM Academy", age = 16)
 
 '> Unpacking Keyword Arguments'
-' > Use the ** character to unpack dictionaries as keyword arguments'
+'   > Use the ** character to unpack dictionaries as keyword arguments'
 
 def unpack_keyword(name, age, grad, school):
     return f"Hello {name}, you are {age} years old, you are in {grad} school, and attend {school}"
@@ -386,10 +374,10 @@ data = {"mass": 2, "acceleration": 5, "name": "Programmer", "force": 10 }
 display_data(**data)
 
 '> Forcing Keyword Arguments'
-' > Use the * character to force arguments to be assigned by keyword only'
-' > Arguments appearing after the * are forced'
-' > Arguments apperaing before the * are not'
-' > Use keyword-only when the names of parameters have meaning, or you want to prevent users from using positional parameters.'
+'   > Use the * character to force arguments to be assigned by keyword only'
+'   > Arguments appearing after the * are forced'
+'   > Arguments apperaing before the * are not'
+'   > Use keyword-only when the names of parameters have meaning, or you want to prevent users from using positional parameters.'
 
 
 # def function_name(pos1, pos2, /, pos_or_kwd, *, kwd1, kwd2):
@@ -426,17 +414,17 @@ def concat(*args, sep = "/"):# parameters after *args are keyword only
 
 #===============================================================================================================================
 '> Arbitrary Arguments Lists: (*args, **kwargs)'
-'''
-  *args (pronounced "star-args"), also known as variable-length argument lists
-    > Allow you to assign a variable number of positional arguments. 
+'   > *args (pronounced "star-args"), also known as variable-length argument lists'
+'       > allow you to assign a variable number of positional arguments'
 
-  **kwargs (pronounced "star-star-kwargs"), also known as variable-length keyword argument lists
-    >Allow you to assign a variable number of keyword arguments
+'   > **kwargs (pronounced "star-star-kwargs"), also known as variable-length keyword argument lists'
+'       > allow you to assign a variable number of keyword arguments'
 
-  *args, and **kwargs can be used together and accept any number of arguments(including 0)
-'''
+'   > *args, and **kwargs can be used together and accept any number of arguments(including 0)'
+
+
 # Parameters must follow this order args, *args, ** kwargs
-#def function_name(arg1,arg2,*args,**kwargs)
+# def function_name(arg1,arg2,*args,**kwargs)
 
 
 #args can be treated as a tuple
@@ -601,8 +589,8 @@ zip()           # Returns an iterator of tuples, where the i-th tuple contains t
 # Libraries are just how they sound, they store code for a specific function. 
 #===============================================================================================================================
 'Lambda Expressions: Shorthand Functions'
-' > Lambda functions are small anonymous shorthand functions'
-" > Lambda's take any number of arguments, but can only have one expression"
+'   > Lambda functions are small anonymous shorthand functions'
+"   > Lambda's take any number of arguments, but can only have one expression"
 
 #syntax
 'lambda arguments : expression'
@@ -797,9 +785,85 @@ letters = ["a","b","c","d","e"]
 print(count_vowels(letters))
 
 
- 
+#===============================================================================================================================#
+'''
+Vocabulary:
 
+Abstraction
+Annotation
+Arguments
+Function
+Function Call
+Function Definition
+Keyword Arguments
+Keyword Parameters
+Lambda
+Parameters
+Positional Arguments
+Positional Parameters
+Return
+Scope/Context
+Sequential
 
+Abstraction:
+Abstraction is a concept in programming that involves hiding the complex implementation details of a system or module and presenting only the necessary features or functionalities to the user. 
+It allows users to interact with a system at a high level without needing to understand its internal workings.
+
+Annotation:
+Annotation is metadata or additional information associated with a program element like a variable, function, class, or method. 
+Annotations are typically used for documentation, type hints, or other context to aid in program understanding or analysis.
+
+Arguments:
+Arguments are values passed to a function or method when it is called. 
+They provide input or data for the function's operation, allowing the function to perform its task with specific values or parameters.
+
+Function:
+A function is a self-contained block of code designed to perform a specific task or operation. 
+It may accept input arguments, perform computations, and return results, enabling code modularity and reusability.
+
+Function Call:
+A function call is an instruction that invokes a specific function with provided arguments. 
+It triggers the execution of the function's code, and upon completion, the function may return a result or perform other actions as defined.
+
+Function Definition:
+A function definition is the implementation of a function, including its name, parameters, and code block. 
+It specifies the behavior of the function and defines how it operates when called with specific arguments.
+
+Keyword Arguments:
+Keyword arguments are arguments passed to a function or method by specifying the parameter name followed by the value. 
+They allow for more explicit and flexible function calls by associating values with specific parameter names.
+
+Keyword Parameters:
+Keyword parameters are parameters in a function definition that are specified with default values and can be passed by name in function calls. 
+They provide a way to define optional parameters with default values, enhancing the flexibility of function definitions.
+
+Lambda:
+A lambda function, also known as an anonymous function or lambda expression, is a small, inline function defined without a name. 
+It is typically used for short, simple operations and can be passed as an argument or used in contexts where a full function definition is not required.
+
+Parameters:
+Parameters are variables or placeholders in a function or method definition that are used to receive input when the function or method is called. 
+They define the interface of the function and specify the types and order of arguments it expects.
+
+Positional Arguments:
+Positional arguments are arguments passed to a function or method by position, where the order of arguments determines their association with the corresponding parameters in the function definition.
+
+Positional Parameters:
+Positional parameters are parameters in a function definition that are specified without default values and must be passed by position in function calls. 
+They represent required inputs to the function and are associated with arguments based on their order.
+
+Return:
+Return is a keyword used in functions to specify the value that the function should produce or output when called. 
+It allows functions to send back results or data to the caller for further use or processing.
+
+Scope/Context:
+Scope or context refers to the visibility and accessibility of variables, functions, and other identifiers within a program. 
+It defines where variables and functions can be accessed and modified, determining their lifetime and visibility.
+
+Sequential:
+Sequential refers to the execution of statements or operations in a specific order, one after the other, without parallelism or concurrency. 
+It describes the linear flow of control in a program, where each statement is executed in sequence.
+'''
 
 
 

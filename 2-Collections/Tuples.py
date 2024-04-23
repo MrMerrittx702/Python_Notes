@@ -39,14 +39,16 @@ A tuple is an ordered collection of elements enclosed within parentheses ().
 #   0,1,2,3,4 are indexes
 #   length = 5
 
-
 '''
 There are four collection data types in the Python programming language:
 
-List is a collection which is ordered and mutable. Allows duplicate members.
-Tuple is a collection which is ordered and immutable. Allows duplicate members.
-Set is a collection which is unordered, unchangeable*, and unindexed. No duplicate members.
-Dictionary is a collection which is ordered** and changeable. No duplicate members.
+> List: collection which is ordered and mutable. Allows duplicate members.
+
+> Tuple: collection which is ordered and immutable. Allows duplicate members.
+
+> Set: collection which is unordered, unchangeable*, and unindexed. No duplicate members.
+
+> Dictionary: collection which is ordered** and changeable. No duplicate members.
 '''
 
 #===============================================================================================================================#
