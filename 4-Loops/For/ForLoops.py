@@ -123,22 +123,27 @@ If you are using an editor like VS code using the tab key, and spaces is not a p
 
 #===============================================================================================================================#
 '> For Loop Syntax'
+iterable_object = range()
 
-for variable in range(): 
+#for keyword loop_variable in keyword iterable_object :
+
+for loop_variable in iterable_object: #This is called the for loop header
     #indent 4 spaces to be inside the loop block
     'repeat this code block'
 #unindent 4 spaces to exit the loop block
 
 #--------------------------------------#
-for variable in range(): #-------#     #         
+for variable in iterable_object: #     #         
     'repeat this code block'     #     #
     #----------------------------#     #
 #--------------------------------------# 
 
 #===============================================================================================================================#
 '> the range constructor'
+'   > the range constructor constructs an iterable object sequence of numbers'
 start,stop,step = ...
 
+'The range() constructor has 3 parameters (start, stop, step)'
 #returns a range of numbers from start to stop-1. 
 range(start, stop, step)
 #start is included (default is 0)
@@ -317,18 +322,6 @@ for number in range(-200,-1501,-100):
 # -200 -300 -400 -500 -600 -700 -800 -900 -1000 -1100 -1200 -1300 -1400 -1500
 #++++++++++++++++++++++++++++++++++++++#
 
-
-
-#===============================================================================================================================#
-'> Off by 1 Errors'
-'''
-  Off-by-One Errors
-  Off-by-one errors occur when a loop iterates one too 
-    many or one too few times, typically due to incorrect 
-      indexing or boundary conditions. 
-'''
-
-
 #===============================================================================================================================#
 '> Special to Python: For-Else'
 
@@ -341,7 +334,7 @@ else:
 #===============================================================================================================================#
 'The For Each Loop'
 '''
-For eaach loops allow direct access to the items in an iterable
+For each loops allow direct access to the items in an iterable
 '''
 
 #special way to write a for loop
@@ -355,7 +348,27 @@ for variable in iterable:
 
 #element does not represent an index, but the actual element. 
 for element in iterable:
-    print(element, end = "|")
+    print(element, end = " ")
+
+
+'Examples'
+
+#Sum of a list of integers
+nums = [1,2,3,4,5]
+sum = 0
+for num in nums:
+    sum += num
+print(sum)
+
+#===============================================================================================================================#
+'> Off by 1 Errors'
+'''
+  Off-by-One Errors
+  Off-by-one errors occur when a loop iterates one too 
+    many or one too few times, typically due to incorrect 
+      indexing or boundary conditions. 
+'''
+
 
 #===============================================================================================================================#
 '> Throw away variable _ '
